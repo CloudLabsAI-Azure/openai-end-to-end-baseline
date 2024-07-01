@@ -120,7 +120,7 @@ resource blobDataReaderRoleAssignment 'Microsoft.Authorization/roleAssignments@2
 resource appServicePlan 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: appServicePlanName
   location: location
-  sku: developmentEnvironment ? appServicePlanSettings[appServicePlanStandardSku] : appServicePlanSettings[appServicePlanPremiumSku]
+  sku: appServicePlanSettings[appServicePlanStandardSku]
   properties: {
     zoneRedundant: !developmentEnvironment
     reserved: true
