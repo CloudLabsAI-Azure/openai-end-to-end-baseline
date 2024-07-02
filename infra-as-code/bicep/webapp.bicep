@@ -38,8 +38,6 @@ var chatOutputName = 'answer'
 
 var openAIApiKey = '@Microsoft.KeyVault(SecretUri=https://${keyVaultName}.vault.azure.net/secrets/openai-key)'
 
-var appServicePlanPremiumSku = 'Premium'
-var appServicePlanStandardSku = 'Standard'
 var appServicePlanSettings = {
   Basic: {
     name: 'B1'
