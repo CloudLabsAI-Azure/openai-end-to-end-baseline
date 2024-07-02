@@ -41,13 +41,9 @@ var openAIApiKey = '@Microsoft.KeyVault(SecretUri=https://${keyVaultName}.vault.
 var appServicePlanPremiumSku = 'Premium'
 var appServicePlanStandardSku = 'Standard'
 var appServicePlanSettings = {
-  Standard: {
-    name: 'S1'
+  Basic: {
+    name: 'B1'
     capacity: 1
-  }
-  Premium: {
-    name: 'P2v2'
-    capacity: 3
   }
 }
 
@@ -120,9 +116,8 @@ resource blobDataReaderRoleAssignment 'Microsoft.Authorization/roleAssignments@2
 resource appServicePlan 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: appServicePlanName
   location: location
-  sku: developmentEnvironment ? appServicePlanSettings[appServicePlanStandardSku] : appServicePlanSettings[appServicePlanPremiumSku]
+  sku: appServicePlanSettings['Basic']
   properties: {
-    zoneRedundant: !developmentEnvironment
     reserved: true
   }
   kind: 'linux'
@@ -472,4 +467,3 @@ resource roleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
     principalId: appServiceManagedIdentity.properties.principalId
   }
 }
-
