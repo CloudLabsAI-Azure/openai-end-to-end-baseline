@@ -7,7 +7,7 @@ param location string = resourceGroup().location
 param baseName string
 
 @description('Optional. When true will deploy a cost-optimised environment for development purposes. Note that when this param is true, the deployment is not suitable or recommended for Production environments. Default = false.')
-param developmentEnvironment bool = false
+param developmentEnvironment bool = true
 
 @description('Domain name to use for App Gateway')
 param customDomainName string = 'contoso.com'
