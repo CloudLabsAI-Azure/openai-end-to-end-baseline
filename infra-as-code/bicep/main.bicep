@@ -25,6 +25,10 @@ param publishFileName string = 'chatui.zip'
 @maxLength(123)
 param jumpBoxAdminPassword string
 
+@description('Specifies the password for the SSL certificate used in the App Gateway')
+
+
+
 // ---- Availability Zones ----
 var availabilityZones = [ '1', '2', '3' ]
 
