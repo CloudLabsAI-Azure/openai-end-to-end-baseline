@@ -6,7 +6,7 @@
         "value": ""
       },
       "developmentEnvironment": {
-        "value": false
+        "value": true
       },
       "appGatewayListenerCertificate": {
         "value": ""
