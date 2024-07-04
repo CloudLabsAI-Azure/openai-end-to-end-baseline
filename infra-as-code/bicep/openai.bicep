@@ -45,7 +45,7 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2023-10-01-preview'
   kind: 'OpenAI'
   properties: {
     customSubDomainName: 'oai${baseName}'
-    publicNetworkAccess: 'Disabled'
+    publicNetworkAccess: 'Enabled'
     networkAcls: {
       defaultAction: 'Deny'
     }
