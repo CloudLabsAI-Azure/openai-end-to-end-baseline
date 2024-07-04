@@ -285,7 +285,7 @@ resource machineLearning 'Microsoft.MachineLearningServices/workspaces@2023-10-0
 
     // configuration for workspaces with private link endpoint
     imageBuildCompute: null
-    publicNetworkAccess: 'Disabled'
+    publicNetworkAccess: 'Enabled'
     v1LegacyMode: false
 
     allowPublicAccessWhenBehindVnet: false
