@@ -120,7 +120,7 @@ resource azureMachineLearningOnlineEndpointManagedIdentity 'Microsoft.ManagedIde
 
 @description('User managed identity that represents the Azure Machine Learning workspace\'s compute instance.')
 resource azureMachineLearningInstanceComputeManagedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
-  name: 'id-amlinstancecompute'
+  name: 'idamlinstancecompute'
   location: location
 }
 
@@ -346,7 +346,7 @@ resource machineLearning 'Microsoft.MachineLearningServices/workspaces@2023-10-0
 
   @description('Azure Machine Learning Compute Instance - Ideal for development and testing from the Azure Machine Learning Studio.')
   resource instanceCompute 'computes' = {
-    name: 'amli-${baseName}'
+    name: 'amli${baseName}'
     location: location
     identity: {
       type: 'UserAssigned'
