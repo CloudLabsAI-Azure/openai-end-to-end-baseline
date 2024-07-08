@@ -14,7 +14,7 @@
     - Name: '**gpt35**' Make sure you use this name.
     - Provider: Azure OpenAI
     - Subscription Id: choose from the DropDown
-    - Azure OpenAI Account Names: `oai-<inject key="DeploymentID" enableCopy="false"></inject>`
+    - Azure OpenAI Account Names: **oai-<inject key="DeploymentID" enableCopy="false"></inject>**
     - API Key: <Choose a key from 'Keys and endpoint' in your Azure OpenAI instance in the Portal>
     - API Base: <Choose the endpoint from 'Keys and endpoint' in your Azure OpenAI instance in the Portal>
     - API type: azure
