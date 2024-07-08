@@ -12,9 +12,9 @@
    
 5. Choose a small Virtual Machine size(i.e D series or B series) for testing and set the number of instances to 2.
    
-6.Press **Review + Create**
+6. Press **Review + Create**
 
-7.Press **Create**
+7. Press **Create**
 
 ## Task 2 : Publish the Chat front-end web app.
 
