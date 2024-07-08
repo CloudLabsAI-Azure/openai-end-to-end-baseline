@@ -22,7 +22,7 @@
 
    >**Note**: Open the openai resource from the portal and copy the key and end point from resource management section.
 
-### Task -2 : Clone an existing prompt flow
+### Task 2 : Clone an existing prompt flow
 
 1. Click on **Prompt flow** in the left navigation in **Machine Learning Studio**.
    
@@ -37,4 +37,20 @@
     - extract_query_from_question
     - augmented_chat
       
-8. Click on Save
+8. Click on **Save**.
+
+### Task 3 : Add runtime & Test the flow
+
+1. Click on **Compute run-time session**.
+
+>**Note**: Wait for the compute session to complete , it takes 1-3 minutes.
+
+2. Execute all the nodes once the current node has completed its run.
+
+>**Note**: Use the scrollbar or down arrow button to navigate down the page, ensuring the graph flow remains unchanged.
+
+4. Click on **Chat** on the UI
+
+5. Enter a question : `What is the difference between this model and previous neural network?` , Wait for the output to be generated, then check the answer and the number of tokens used.
+
+
