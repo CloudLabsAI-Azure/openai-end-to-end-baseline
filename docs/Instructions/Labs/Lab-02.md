@@ -18,10 +18,10 @@
 
 ### Task 2 : Publish the Chat front-end web app.
 
-1. In the Azure Portal, go to your storage account **stinject key="DeploymentID" enableCopy="false"></inject>**, navigate to the **Containers** section within **data storage**, and select **Deploy** container. From there, upload the file `chatui.zip` located at `C:\LabFiles\openai-end-to-end-baseline\website\chatui.zip`.
+1. In the Azure Portal, go to your storage account **st <inject key="DeploymentID" enableCopy="false"></inject>**, navigate to the **Containers** section within **data storage**, and select **Deploy** container. From there, upload the file `chatui.zip` located at `C:\LabFiles\openai-end-to-end-baseline\website\chatui.zip`.
   
 
-2. Go to your storage account **stinject key="DeploymentID" enableCopy="false"></inject>** , Choose containers under data storage , select deploy container , click on chatui.zip , select generate SAS , click on generate sas then copy sas url
+2. Go to your storage account **st <inject key="DeploymentID" enableCopy="false"></inject>** , Choose containers under data storage , select deploy container , click on chatui.zip , select generate SAS , click on generate sas then copy sas url
 
 3. Set the environment variable WEBSITE_RUN_FROM_PACKAGE in the **app-<inject key="DeploymentID" enableCopy="false"></inject>** with the SAS URL of the zip file.
 
