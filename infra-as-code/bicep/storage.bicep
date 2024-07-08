@@ -46,6 +46,7 @@ resource appDeployStorage 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   properties: {
     accessTier: 'Hot'
     allowBlobPublicAccess: false
+    publicNetworkAccess: 'Enabled'
     allowSharedKeyAccess: true
     allowCrossTenantReplication: false
     encryption: {
