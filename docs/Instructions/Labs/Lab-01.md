@@ -22,7 +22,7 @@
 
    >**Note**: Open the openai resource from the portal and copy the key and end point from resource management section.
 
-### Task -2 Clone an existing prompt flow
+### Task -2 : Clone an existing prompt flow
 
 1. Click on **Prompt flow** in the left navigation in **Machine Learning Studio**.
    
