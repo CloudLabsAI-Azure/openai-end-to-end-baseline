@@ -6,7 +6,7 @@ Welcome to your Openai end to end baseline Workshop! We've prepared a seamless e
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/labguide-1.png)
+![Access Your VM and Lab Guide](../docs/media/labguide-1.png)
 
 ### Virtual Machine & Lab Guide
  
