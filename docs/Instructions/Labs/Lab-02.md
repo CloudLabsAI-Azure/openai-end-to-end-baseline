@@ -21,9 +21,7 @@
 1. Open PowerShell ISE with administrator access from the search bar, Login to the azure
 
   ```
-
    az login
-
   ```
 
 2. Execute the following command to upload the zip file to the storage account.
