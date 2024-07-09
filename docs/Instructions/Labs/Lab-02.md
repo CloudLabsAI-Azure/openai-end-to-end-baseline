@@ -1,4 +1,4 @@
-## Lab -02 
+## Lab -02 OpenAI end to end baseline
 
 ### Task 1 : Deploy to Azure Machine Learning managed online endpoint.
 
