@@ -1,6 +1,17 @@
-### Lab -03 Openai end to end baseline
+# Lab 03: Openai end to end baseline
 
-#### Task 1: Deploying the flow to Azure App Service option.
+## Lab scenario
+In this lab, you'll deploy an Azure OpenAI prompt flow to Azure App Service. Start by downloading the prompt flow as a zip from Azure ML Studio. Set up a Python environment using Conda, configure connections in YAML files, and build the flow into a Docker container with `pf flow build`. Push the image to your Azure Container Registry and deploy it to App Service. Update the chat UI's configuration to use the deployed prompt flow endpoint (`https://$PF_APP_SERVICE_NAME.azurewebsites.net/score`) and verify client application functionality.
+
+## Lab objectives
+In this lab, you will perform the following:
+- Task 1: Deploy the flow to Azure App Service option
+- Task 2: Build and push the image
+- Task 3: Host the chat flow container image in Azure App Service
+
+## Estimated timing:
+
+### Task 1: Deploy the flow to Azure App Service option
 
 1. Open the Prompt flow UI in Azure Machine Learning Studio
 
@@ -53,7 +64,7 @@
 
 ```
 
-### Task 3: Build and push the image
+### Task 2: Build and push the image
 
 1. Ensure the requirements.txt in the dist/flow folder has the appropriate requirements. At the time of writing, they were as follows:
 
@@ -106,4 +117,10 @@
       az webapp config appsettings set --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP --settings chatApiEndpoint=$ENDPOINT_URL
       az webapp restart --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP
     ```
-4. Validate the client application that is now pointing at the flow deployed in a container still works
+4. Validate the client application that is now pointing at the flow deployed in a container still works.
+
+## Review
+In this lab you have completed the following tasks:
+- Deployed the flow to Azure App Service option
+- Builded and push the image
+- Hosted the chat flow container image in Azure App Service

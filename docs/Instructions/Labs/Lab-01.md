@@ -1,8 +1,17 @@
-## Lab 01 : Open AI end to end baseline.
+# Lab 01: Open AI end to end baseline
 
+## Lab scenario
+In this lab, you will engage in a series of steps aimed at creating, testing, and deploying a prompt flow using Azure Machine Learning Studio. This process begins with establishing a connection to Azure OpenAI, followed by the cloning of an existing prompt flow. Subsequently, you will configure this cloned flow to meet specific requirements or objectives. Finally, the flow will undergo testing to ensure its functionality and effectiveness before being deployed for practical use.
+
+## Lab objectives
+In this lab, you will perform the following:
+- Task 1: Create, test, and deploy a Prompt flow
+- Task 2: Clone an existing prompt flow
+- Task 3: Add runtime & Test the flow
+
+## Estimated timing:
 
 ### Task 1: Create, test, and deploy a Prompt flow
-
 
 1. In the **Azure portal**, search for **mlw-<inject key="DeploymentID" enableCopy="false"></inject>** for Machine learning workspace and select **Launch studio**.
 
@@ -22,7 +31,7 @@
 
    >**Note**: Open the openai resource from the portal and copy the key and end point from resource management section.
 
-### Task 2 : Clone an existing prompt flow
+### Task 2: Clone an existing prompt flow
 
 1. Click on **Prompt flow** in the left navigation in **Machine Learning Studio**.
    
@@ -39,7 +48,7 @@
       
 8. Click on **Save**.
 
-### Task 3 : Add runtime & Test the flow
+### Task 3: Add runtime & Test the flow
 
 1. Click on **Compute run-time session**.
 
@@ -52,5 +61,11 @@
 4. Click on **Chat** on the UI
 
 5. Enter a question : `What is the difference between this model and previous neural network?` , Wait for the output to be generated, then check the answer and the number of tokens used.
+
+## Review
+In this lab you have completed the following tasks:
+- Created, tested, and deployed a Prompt flow
+- Cloned an existing prompt flow
+- Added runtime & Test the flow
 
 
