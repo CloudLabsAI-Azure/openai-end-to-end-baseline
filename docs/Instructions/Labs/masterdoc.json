@@ -1,0 +1,24 @@
+[
+    {
+      "Name": "OpenAI-End-To-End-Baseline",
+      "Language": "English",
+      "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/openai-end-to-end-baseline/stage/docs/Instructions/Labs/00-GettingStarted-V2.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/openai-end-to-end-baseline/stage/docs/Instructions/Labs/Lab-01.md",
+          "Order": 2
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/openai-end-to-end-baseline/stage/docs/Instructions/Labs/Lab-02.md",
+          "Order": 3
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/openai-end-to-end-baseline/stage/docs/Instructions/Labs/Lab-03.md",
+          "Order": 4
+        }
+      ]
+    }
+  ]
