@@ -1,4 +1,4 @@
-## Lab -01 
+## Lab 01 : Open AI end to end baseline.
 
 
 ### Task 1: Create, test, and deploy a Prompt flow
