@@ -38,7 +38,7 @@ In this lab, you will perform the following:
     
 ### Task 2: Publish the Chat front-end web app
 
-1. In the Azure Portal, go to your storage account **st <inject key="DeploymentID" enableCopy="false"></inject>**, navigate to the **Containers** section within **data storage**, and select **Deploy** container. From there, upload the file `chatui.zip` located at `C:\LabFiles\openai-end-to-end-baseline\website\chatui.zip`.
+1. In the Azure Portal, go to your storage account **st <inject key="DeploymentID" enableCopy="false"></inject>**, navigate to the **Containers** section within **data storage**, and select **deploy** container. From there, upload the file `chatui.zip` located at `C:\LabFiles\openai-end-to-end-baseline\website\chatui.zip`.
 
    ![Access Your VM and Lab Guide](../media/openai-main-11.png)
    

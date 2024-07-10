@@ -29,7 +29,6 @@ In this lab, you will perform the following:
     # You will need to install the following if you build the docker image locally
     pip install keyrings.alt
     pip install bs4
-   
     ```
 
 5. Unzip the prompt flow zip file you downloaded
