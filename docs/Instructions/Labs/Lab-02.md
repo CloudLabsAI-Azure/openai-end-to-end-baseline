@@ -40,24 +40,26 @@ In this lab, you will perform the following:
 
 1. In the Azure Portal, go to your storage account **st <inject key="DeploymentID" enableCopy="false"></inject>**, navigate to the **Containers** section within **data storage**, and select **Deploy** container. From there, upload the file `chatui.zip` located at `C:\LabFiles\openai-end-to-end-baseline\website\chatui.zip`.
 
-  ![Access Your VM and Lab Guide](/docs/media/openai-main-11.png)
+   ![Access Your VM and Lab Guide](/docs/media/openai-main-11.png)
    
 2. Go to your storage account **st <inject key="DeploymentID" enableCopy="false"></inject>** , Choose containers under data storage , select deploy container , click on chatui.zip , select generate SAS , click on generate sas then copy sas url
 
-   ![Access Your VM and Lab Guide](/docs/media/openai-main-10.png)
+    ![Access Your VM and Lab Guide](/docs/media/openai-main-10.png)
    
 4. Set the environment variable WEBSITE_RUN_FROM_PACKAGE in the **app-<inject key="DeploymentID" enableCopy="false"></inject>** with the SAS URL of the zip file.
 
-  ![Access Your VM and Lab Guide](/docs/media/openai-main-08.png)
+   ![Access Your VM and Lab Guide](/docs/media/openai-main-08.png)
   
 4. Create an A record for DNS,please edit your hosts file (C:\Windows\System32\drivers\etc\hosts or /etc/hosts) and add the following record to the end: ${APPGW_PUBLIC_IP} www.${DOMAIN_NAME_APPSERV_BASELINE} (e.g. 50.140.130.120  www.contoso.com)
 
-  ![Access Your VM and Lab Guide](/docs/media/openai-main-06.png)
+   ![Access Your VM and Lab Guide](/docs/media/openai-main-06.png)
 
-  ![Access Your VM and Lab Guide](/docs/media/openai-main-07.png)
+   ![Access Your VM and Lab Guide](/docs/media/openai-main-07.png)
   
-5. Browse to the site (e.g. https://www.contoso.com)
+5. Browse to the site (e.g. https://www.app-1399374.azurewebsites.net.com)
 
+   ![Access Your VM and Lab Guide](/docs/media/openai-main-13.png)
+   
 ## Review
 In this lab you have completed the following tasks:
 - Deployed to Azure Machine Learning managed online endpoint
