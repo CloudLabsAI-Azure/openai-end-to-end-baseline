@@ -54,26 +54,26 @@ In this lab, you will perform the following:
       api_version: "2023-07-01-preview"
 
     ```
->**Note**:The App Service is configured with App Settings that surface as environment variables for OPENAICONNECTION_API_KEY and OPENAICONNECTION_API_BASE.
+    >**Note**:The App Service is configured with App Settings that surface as environment variables for OPENAICONNECTION_API_KEY and OPENAICONNECTION_API_BASE.
 
 11. Build the flow
     
- ```
-  pf flow build --source ./ --output dist --format docker
-  The following code will create a folder named 'dist' with a docker file and all the required flow files.
+    ```
+      pf flow build --source ./ --output dist --format docker
+      The following code will create a folder named 'dist' with a docker file and all the required flow files.
 
-```
+    ```
 
 ### Task 2: Build and push the image
 
 1. Ensure the **requirements.txt** in the dist/flow folder has the appropriate requirements. At the time of writing, they were as follows:
 
-  ```
-    promptflow[azure]
-    promptflow-tools==0.1.0.b5
-    python-dotenv
-    bs4
-  ```
+    ```
+      promptflow[azure]
+      promptflow-tools==0.1.0.b5
+      python-dotenv
+      bs4
+    ```
 2. Ensure the connections folder with the connection was created in the dist folder. If not, copy the connections folder, along with the connection file to the dist folder.
 
 3. Make sure you have network access to your Azure Container Registry and have an RBAC role such as ACRPush that will allow you to push an image. If you are running on a local workstation, you can set Public network access to All networks or Selected networks and add your machine ip to the allowed ip list.
@@ -82,18 +82,18 @@ In this lab, you will perform the following:
 
 5. Run the following commands from the dist folder in your terminal:
 
-  ```
-    az login
+    ```
+      az login
+      
+      NAME_OF_ACR="cr$BASE_NAME"
+      ACR_CONTAINER_NAME="aoai"
+      IMAGE_NAME="wikichatflow"
+      IMAGE_TAG="1.1"
+      FULL_IMAGE_NAME="$ACR_CONTAINER_NAME/$IMAGE_NAME:$IMAGE_TAG"
+      
+      az acr build -t $FULL_IMAGE_NAME -r $NAME_OF_ACR .
     
-    NAME_OF_ACR="cr$BASE_NAME"
-    ACR_CONTAINER_NAME="aoai"
-    IMAGE_NAME="wikichatflow"
-    IMAGE_TAG="1.1"
-    FULL_IMAGE_NAME="$ACR_CONTAINER_NAME/$IMAGE_NAME:$IMAGE_TAG"
-    
-    az acr build -t $FULL_IMAGE_NAME -r $NAME_OF_ACR .
-  
-  ```
+    ```
 ### Task 3 : Host the chat flow container image in Azure App Service
 
 1. Perform the following steps to deploy the container image to Azure App Service:

@@ -15,19 +15,19 @@ In this lab, you will perform the following:
 
 1. In the **Azure portal**, search for **mlw-<inject key="DeploymentID" enableCopy="false"></inject>** for Machine learning workspace and select **Launch studio**.
 
-   ![Access Your VM and Lab Guide](/docs/media/openai_1.png)
+   ![Access Your VM and Lab Guide](../media/openai_1.png)
 
 2. Click on the **workspace** **mlw-<inject key="DeploymentID" enableCopy="false"></inject>**
    
-   ![Access Your VM and Lab Guide](/docs/media/openai_2.png)
+   ![Access Your VM and Lab Guide](../media/openai_2.png)
    
 3. Click on **Prompt flow** in the left navigation in Machine Learning Studio.
 
-    ![Access Your VM and Lab Guide](/docs/media/openai_3_1.png)
+    ![Access Your VM and Lab Guide](../media/openai_3_1.png)
 
 4. Click on the **Connections** tab and click **Create** , Choose **Azure OpenAI** from the dropdown.
 
-    ![Access Your VM and Lab Guide](/docs/media/openai_6-1.png)
+   ![Access Your VM and Lab Guide](../media/openai_6-1.png)
 
 6. Fill out the properties:
     - Name: '**gpt35**' Make sure you use this name.
@@ -39,7 +39,7 @@ In this lab, you will perform the following:
     - API type: azure
     - API version:
 
-    ![Access Your VM and Lab Guide](/docs/media/openai_8-1.png)
+    ![Access Your VM and Lab Guide](../media/openai_8-1.png)
    
    >**Note**: Open the openai resource from the portal and copy the key and end point from resource management section.
 
@@ -47,28 +47,28 @@ In this lab, you will perform the following:
 
 1. Click on **Prompt flow** in the left navigation in **Machine Learning Studio**.
 
-   ![Access Your VM and Lab Guide](/docs/media/openai_3_1.png)
+   ![Access Your VM and Lab Guide](../media/openai_3_1.png)
    
 2. Click on the **Flows tab** and click **Create**.
 
-   ![Access Your VM and Lab Guide](/docs/media/openai_3.png)
+   ![Access Your VM and Lab Guide](../media/openai_3.png)
  
 3. Click **Clone** under **Chat with Wikipedia**.
 
-   ![Access Your VM and Lab Guide](/docs/media/openai_4.png)
+   ![Access Your VM and Lab Guide](../media/openai_4.png)
    
 4. Name it **chat_wiki** and Press **Clone**
 
-   ![Access Your VM and Lab Guide](/docs/media/openai_5.png)
+   ![Access Your VM and Lab Guide](../media/openai_5.png)
    
 5. Set the **Connection** and **deployment_name** to **gpt35** and set the **max_tokens property** of the deployment_name to 256, for the following 
     steps:
     - extract_query_from_question
     - augmented_chat
   
-   ![Access Your VM and Lab Guide](/docs/media/openai_08_9.png)
+   ![Access Your VM and Lab Guide](../media/openai_08_9.png)
 
-   ![Access Your VM and Lab Guide](/docs/media/openai_11-1.png)
+   ![Access Your VM and Lab Guide](../media/openai_11-1.png)
    
 6. Click on **Save**.
 
@@ -76,19 +76,19 @@ In this lab, you will perform the following:
 
 1. Click on **Start run-time session**.
 
-   ![Access Your VM and Lab Guide](/docs/media/openai_10-1.png)
+   ![Access Your VM and Lab Guide](../media/openai_10-1.png)
 
->**Note**: Wait for the compute session to complete , it takes 1-3 minutes.
+   >**Note**: Wait for the compute session to complete , it takes 1-3 minutes.
 
 2. Execute all the nodes once the current node has completed its run.
 
-   ![Access Your VM and Lab Guide](/docs/media/openai_12.png)
+   ![Access Your VM and Lab Guide](../media/openai_12.png)
    
->**Note**: Use the scrollbar or down arrow button to navigate down the page, ensuring the graph flow remains unchanged.
+   >**Note**: Use the scrollbar or down arrow button to navigate down the page, ensuring the graph flow remains unchanged.
 
 4. Click on **Chat** on the UI
 
-   ![Access Your VM and Lab Guide](/docs/media/openai_13.png)
+   ![Access Your VM and Lab Guide](../media/openai_13.png)
    
 6. Enter a question : `What is the difference between this model and previous neural network?` , Wait for the output to be generated, then check the answer and the number of tokens used.
 
