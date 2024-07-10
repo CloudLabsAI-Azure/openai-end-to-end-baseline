@@ -29,19 +29,19 @@ var enableDdosProtection = !developmentEnvironment
 // ---- Networking resources ----
 
 // DDoS Protection Plan
-resource ddosProtectionPlan 'Microsoft.Network/ddosProtectionPlans@2022-11-01' = if (enableDdosProtection) {
-  name: ddosPlanName
-  location: location
-  properties: {}
-}
+//resource ddosProtectionPlan 'Microsoft.Network/ddosProtectionPlans@2022-11-01' = if (enableDdosProtection) {
+//  name: ddosPlanName
+//  location: location
+//  properties: {}
+//}
 
 // Virtual network and subnets
 resource vnet 'Microsoft.Network/virtualNetworks@2022-11-01' = {
   name: vnetName
   location: location
   properties: {
-    enableDdosProtection: enableDdosProtection
-    ddosProtectionPlan: enableDdosProtection ? { id: ddosProtectionPlan.id } : null
+//    enableDdosProtection: enableDdosProtection
+//    ddosProtectionPlan: enableDdosProtection ? { id: ddosProtectionPlan.id } : null
     addressSpace: {
       addressPrefixes: [
         vnetAddressPrefix
