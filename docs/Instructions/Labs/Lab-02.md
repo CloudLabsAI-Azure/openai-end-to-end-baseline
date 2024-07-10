@@ -13,30 +13,49 @@ In this lab, you will perform the following:
 ### Task 1: Deploy to Azure Machine Learning managed online endpoint
 
 1. Navigate back to the ML workspace and choose **prompt flow** and select **chat_wiki** flow.
-   
-2. Create a deployment in the UI, by selecting the **deploy** icon from the tool bar.
 
-3. Choose **Existing** Endpoint and select the one called **ept-<inject key="DeploymentID" enableCopy="false"></inject>**
+   ![Access Your VM and Lab Guide](/docs/media/openai-main-01.png)
    
-4. Name the deployment **eptdeploy-<inject key="DeploymentID" enableCopy="false"></inject>**.
-   
-5. Choose a small Virtual Machine size(i.e D series or B series) for testing and set the number of instances to 2.
-   
-6. Press **Review + Create**
+3. Create a deployment in the UI, by selecting the **deploy** icon from the tool bar.
 
-7. Press **Create**
+    ![Access Your VM and Lab Guide](/docs/media/openai-main-02.png)
 
+5. Choose **Existing** Endpoint and select the one called **ept-<inject key="DeploymentID" enableCopy="false"></inject>**
+
+    ![Access Your VM and Lab Guide](/docs/media/openai-main-03.png)
+   
+7. Name the deployment **eptdeploy-<inject key="DeploymentID" enableCopy="false"></inject>**.
+   
+9. Choose a small Virtual Machine size(i.e D series or B series) for testing and set the number of instances to 2.
+   
+10. Press **Review + Create**
+
+    ![Access Your VM and Lab Guide](/docs/media/openai-main-04.png)
+    
+12. Press **Create**
+
+    ![Access Your VM and Lab Guide](/docs/media/openai-main-05.png)
+    
 ### Task 2: Publish the Chat front-end web app
 
 1. In the Azure Portal, go to your storage account **st <inject key="DeploymentID" enableCopy="false"></inject>**, navigate to the **Containers** section within **data storage**, and select **Deploy** container. From there, upload the file `chatui.zip` located at `C:\LabFiles\openai-end-to-end-baseline\website\chatui.zip`.
-  
 
+  ![Access Your VM and Lab Guide](/docs/media/openai-main-11.png)
+   
 2. Go to your storage account **st <inject key="DeploymentID" enableCopy="false"></inject>** , Choose containers under data storage , select deploy container , click on chatui.zip , select generate SAS , click on generate sas then copy sas url
 
-3. Set the environment variable WEBSITE_RUN_FROM_PACKAGE in the **app-<inject key="DeploymentID" enableCopy="false"></inject>** with the SAS URL of the zip file.
+   ![Access Your VM and Lab Guide](/docs/media/openai-main-10.png)
+   
+4. Set the environment variable WEBSITE_RUN_FROM_PACKAGE in the **app-<inject key="DeploymentID" enableCopy="false"></inject>** with the SAS URL of the zip file.
 
+  ![Access Your VM and Lab Guide](/docs/media/openai-main-08.png)
+  
 4. Create an A record for DNS,please edit your hosts file (C:\Windows\System32\drivers\etc\hosts or /etc/hosts) and add the following record to the end: ${APPGW_PUBLIC_IP} www.${DOMAIN_NAME_APPSERV_BASELINE} (e.g. 50.140.130.120  www.contoso.com)
 
+  ![Access Your VM and Lab Guide](/docs/media/openai-main-06.png)
+
+  ![Access Your VM and Lab Guide](/docs/media/openai-main-07.png)
+  
 5. Browse to the site (e.g. https://www.contoso.com)
 
 ## Review
