@@ -15,7 +15,7 @@ In this lab, you will perform the following:
 
 1. Open the Prompt flow UI in Azure Machine Learning Studio
 
-2. Expand the 'Files' tab in the right pane of the UI
+2. Expand the **Files** tab in the right pane of the UI
 
 3. Click on the download icon to download the flow as a zip file.
 
@@ -36,7 +36,7 @@ In this lab, you will perform the following:
 
 6. In your terminal, change the directory to the root of the unzipped flow
 
-7. Create a folder called 'connections'
+7. Create a folder called **connections**
 
 8. Create a file for each connection you created in the Prompt flow UI
 
@@ -66,7 +66,7 @@ In this lab, you will perform the following:
 
 ### Task 2: Build and push the image
 
-1. Ensure the requirements.txt in the dist/flow folder has the appropriate requirements. At the time of writing, they were as follows:
+1. Ensure the **requirements.txt** in the dist/flow folder has the appropriate requirements. At the time of writing, they were as follows:
 
   ```
     promptflow[azure]
