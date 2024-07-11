@@ -141,7 +141,7 @@ resource webApp 'Microsoft.Web/sites@2022-09-01' = {
     siteConfig: {
       vnetRouteAllEnabled: true
       http20Enabled: true
-      publicNetworkAccess: 'Disabled'
+      publicNetworkAccess: 'Enabled'
       alwaysOn: true
       linuxFxVersion: 'DOTNETCORE|7.0'
       netFrameworkVersion: null
@@ -349,7 +349,7 @@ resource webAppPf 'Microsoft.Web/sites@2022-09-01' = {
       linuxFxVersion: 'DOCKER|mcr.microsoft.com/appsvc/staticsite:latest'
       vnetRouteAllEnabled: true
       http20Enabled: true
-      publicNetworkAccess: 'Disabled'
+      publicNetworkAccess: 'Enabled'
       alwaysOn: true
       acrUseManagedIdentityCreds: true
       acrUserManagedIdentityID: appServiceManagedIdentity.properties.clientId
