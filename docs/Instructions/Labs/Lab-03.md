@@ -13,86 +13,135 @@ In this lab, you will perform the following:
 
 ### Task 1: Deploy the flow to Azure App Service option
 
-1. Open the Prompt flow UI in Azure Machine Learning Studio
+1. Navigate back to the **chat_wiki** tab, in Azure Machine Learning Studio.
 
-2. Expand the **Files** tab in the right pane of the UI
+1. Expand the **Files** tab in the right pane of the UI.
 
-3. Click on the download icon to download the flow as a zip file.
+    ![Access Your VM and Lab Guide](../media/promptflow.png)
 
-4. Perfom the below commands in visual studio code.
+1. Click on the **download icon** to download the flow as a zip file. Unzip the prompt flow zip file you downloaded.
+
+    ![Access Your VM and Lab Guide](../media/download.png)
+
+1. Minimize **Azure Portal**, from the desktop, double-click on the **Visual Studio Code**. Select **Explorer**, select **Open Folder** and select the folder that you downloaded.
+
+    >**Note:** On the **Do you trust the authors of the files in this folder** pop-up select **Yes, I trust the authors**.
+
+1. From the top menu bar, select **View**, and then select **Terminal**. Perfom the below commands in the terminal:
 
    ```
     conda create --name pf python=3.11.4
-    conda activate pf
-    pip install promptflow promptflow-tools
-    
-    # You will need to install the following if you build the docker image locally
-    pip install keyrings.alt
-    pip install bs4
     ```
 
-5. Unzip the prompt flow zip file you downloaded
+    >**Note:** If you are facing any errors with conda commands, follow these steps, otherwise you can move on to the next steps:
 
-6. In your terminal, change the directory to the root of the unzipped flow
+    - From the search bar on the desktop, search for **Environment variables** and select **Edit the system environment variables**.
+  
+    - In the **System Properties** window, select **Environment variables**.
 
-7. Create a folder called **connections**
+    - Under **System variables**, select **Path** and click **Edit**.
+    
+    - Click **New** and add this path: **C:\LabFiles\Anaconda3\Scripts**.
+    
+    - Click **OK** three times to close all windows.
 
-8. Create a file for each connection you created in the Prompt flow UI
+    ```
+    conda init
+    ```
 
-9. Make sure you name the file to match the name you gave the connection. For example, if you named your connection 'gpt35' in Prompt flow, create a file called 'gpt35.yaml' under the connections folder.
+    ```
+    conda activate 
+    ```
+
+    ```
+    conda activate pf
+    ```
+
+    ```
+    pip install promptflow promptflow-tools
+    ```
+    
+    >**Note:** You will need to install the following if you build the docker image locally
+    ```
+    pip install keyrings.alt
+    ```
+    ```
+    pip install bs4
+    ```
+    ```
+    pip install openai
+    ```
+
+1. Create a folder called **connections**, under **chat_wiki** folder:
+
+    ```
+    mkdir connections
+    ```
+
+1. Under the **Connections** folder create a file called **gpt35.yaml**.
 
 10. Enter the following values in the file:
 
     ```
-      $schema: https://azuremlschemas.azureedge.net/promptflow/latest/AzureOpenAIConnection.schema.json
-      name: gpt35
-      type: azure_open_ai
-      api_key: "${env:OPENAICONNECTION_API_KEY}"
-      api_base: "${env:OPENAICONNECTION_API_BASE}"
-      api_type: "azure"
-      api_version: "2023-07-01-preview"
-
+    $schema: https://azuremlschemas.azureedge.net/promptflow/latest/AzureOpenAIConnection.schema.json
+    name: gpt35
+    type: azure_open_ai
+    api_key: "${env:OPENAICONNECTION_API_KEY}"
+    api_base: "${env:OPENAICONNECTION_API_BASE}"
+    api_type: "azure"
+    api_version: "2023-07-01-preview"
     ```
     >**Note**:The App Service is configured with App Settings that surface as environment variables for OPENAICONNECTION_API_KEY and OPENAICONNECTION_API_BASE.
 
-11. Build the flow
+11. Now, build the flow by running these commands:
     
     ```
-      pf flow build --source ./ --output dist --format docker
-      The following code will create a folder named 'dist' with a docker file and all the required flow files.
+    pf connection create -f .\connections\gpt35.yaml
+    ```
 
     ```
+    pf flow build --source ./ --output dist --format docker
+    ```
+
+    >**Note:** The following code will create a folder named 'dist' with a docker file and all the required flow files.
 
 ### Task 2: Build and push the image
 
-1. Ensure the **requirements.txt** in the dist/flow folder has the appropriate requirements. At the time of writing, they were as follows:
+1. Ensure the **requirements.txt** in the **dist/flow** folder has the appropriate requirements. At the time of writing, they were as follows:
 
     ```
-      promptflow[azure]
-      promptflow-tools==0.1.0.b5
-      python-dotenv
-      bs4
+    promptflow[azure]
+    promptflow-tools==0.1.0.b5
+    python-dotenv
+    bs4
+    openai
     ```
-2. Ensure the connections folder with the connection was created in the dist folder. If not, copy the connections folder, along with the connection file to the dist folder.
+1. Ensure the connections folder with the connection was created in the dist folder. If not, copy the connections folder, along with the connection file to the dist folder.
 
-3. Make sure you have network access to your Azure Container Registry and have an RBAC role such as ACRPush that will allow you to push an image. If you are running on a local workstation, you can set Public network access to All networks or Selected networks and add your machine ip to the allowed ip list.
-
-4. Build and push the container image
-
-5. Run the following commands from the dist folder in your terminal:
+1. In the visual studio code open the **Git Bash** terminal, build and push the container image by running these following commands from the dist folder in your terminal:
 
     ```
-      az login
-      
-      NAME_OF_ACR="cr$BASE_NAME"
-      ACR_CONTAINER_NAME="aoai"
-      IMAGE_NAME="wikichatflow"
-      IMAGE_TAG="1.1"
-      FULL_IMAGE_NAME="$ACR_CONTAINER_NAME/$IMAGE_NAME:$IMAGE_TAG"
-      
-      az acr build -t $FULL_IMAGE_NAME -r $NAME_OF_ACR .
-    
+    az login
     ```
+    ```
+    NAME_OF_ACR="cr<inject key="DeploymentID" enableCopy="false"></inject>"
+    ```
+    ```
+    ACR_CONTAINER_NAME="aoai"
+    ```
+    ```
+    IMAGE_NAME="wikichatflow"
+    ```
+    ```
+    IMAGE_TAG="1.1"
+    ```
+    ```
+    FULL_IMAGE_NAME="$ACR_CONTAINER_NAME/$IMAGE_NAME:$IMAGE_TAG"
+    ```
+    ```
+    az acr build -t $FULL_IMAGE_NAME -r $NAME_OF_ACR .
+    ```
+
 ### Task 3 : Host the chat flow container image in Azure App Service
 
 1. Perform the following steps to deploy the container image to Azure App Service:
@@ -101,6 +150,7 @@ In this lab, you will perform the following:
 
     ```
     PF_APP_SERVICE_NAME="app-$BASE_NAME-pf"
+    RESOURCE_GROUP="ODL-Openai-<inject key="DeploymentID" enableCopy="false"></inject>-02"
     ACR_IMAGE_NAME="$NAME_OF_ACR.azurecr.io/$ACR_CONTAINER_NAME/$IMAGE_NAME:$IMAGE_TAG"
     
     az webapp config container set --name $PF_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP --docker-custom-image-name $ACR_IMAGE_NAME --docker-registry-server-url https://$NAME_OF_ACR.azurecr.io
@@ -110,11 +160,11 @@ In this lab, you will perform the following:
 3. Modify the configuration setting in the App Service that has the chat UI and point it to your deployed promptflow endpoint hosted in App Service instead of the managed online endpoint.
 
     ```
-      UI_APP_SERVICE_NAME="app-$BASE_NAME"
-      ENDPOINT_URL="https://$PF_APP_SERVICE_NAME.azurewebsites.net/score"
-      
-      az webapp config appsettings set --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP --settings chatApiEndpoint=$ENDPOINT_URL
-      az webapp restart --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP
+    UI_APP_SERVICE_NAME="app-$BASE_NAME"
+    ENDPOINT_URL="https://$PF_APP_SERVICE_NAME.azurewebsites.net/score"
+    
+    az webapp config appsettings set --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP --settings chatApiEndpoint=$ENDPOINT_URL
+    az webapp restart --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP
     ```
 4. Validate the client application that is now pointing at the flow deployed in a container still works.
 

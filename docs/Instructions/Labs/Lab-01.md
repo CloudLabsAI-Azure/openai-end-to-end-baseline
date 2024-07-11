@@ -13,84 +13,77 @@ In this lab, you will perform the following:
 
 ### Task 1: Create, test, and deploy a Prompt flow
 
-1. In the **Azure portal**, search for **mlw-<inject key="DeploymentID" enableCopy="false"></inject>** for Machine learning workspace and select **Launch studio**.
+1. In the **Azure portal**, in **Search resources, services, and docs** search for and select **mlw-<inject key="DeploymentID" enableCopy="false"></inject>** for Machine learning workspace and select **Launch studio**.
 
-   ![Access Your VM and Lab Guide](../media/openai_1.png)
+   ![Access Your VM and Lab Guide](../media/mlw.png)
 
-2. Click on the **workspace** **mlw-<inject key="DeploymentID" enableCopy="false"></inject>**
-   
-   ![Access Your VM and Lab Guide](../media/openai_2.png)
-   
-3. Click on **Prompt flow** in the left navigation in Machine Learning Studio.
+1. On the **Azure AI | Machine Learning Studio**, under **mlw-<inject key="DeploymentID" enableCopy="false"></inject>** workspace, from the left navigation pane select **Prompt flow**.
 
     ![Access Your VM and Lab Guide](../media/openai_3_1.png)
 
-4. Click on the **Connections** tab and click **Create** , Choose **Azure OpenAI** from the dropdown.
+1. Click on the **Connections** tab and click **Create (1)** , Choose **Azure OpenAI (2)** from the dropdown.
 
    ![Access Your VM and Lab Guide](../media/openai_6-1.png)
 
-6. Fill out the properties:
-    - Name: '**gpt35**' Make sure you use this name.
-    - Provider: Azure OpenAI
-    - Subscription Id: choose from the DropDown
-    - Azure OpenAI Account Names: **oai-<inject key="DeploymentID" enableCopy="false"></inject>**
-    - API Key: <Choose a key from 'Keys and endpoint' in your Azure OpenAI instance in the Portal>
-    - API Base: <Choose the endpoint from 'Keys and endpoint' in your Azure OpenAI instance in the Portal>
-    - API type: azure
-    - API version:
+1. Navigate back to the Azure Portal, in **Search resources, services, and docs** search for and select **oai-<inject key="DeploymentID" enableCopy="false"></inject>**. 
 
-    ![Access Your VM and Lab Guide](../media/openai_8-1.png)
-   
-   >**Note**: Open the openai resource from the portal and copy the key and end point from resource management section.
+1. On the **oai-<inject key="DeploymentID" enableCopy="false"></inject>**, from the left navigation pane under **Resource Management** select **Keys and Endpoints**.
+
+1. Copy the value of **KEY 1** and **Endpoint**, paste these values in the notepad you will use these values in the next step.
+
+1. Navigate back to the **Connections** tab, and follow these instructions to fill out the properties for creating connections:
+    
+   - Name: **gpt35**
+   - Provider: **Azure OpenAI**
+   - Subscription Id: Select the default
+   - Azure OpenAI Account Names: **oai-<inject key="DeploymentID" enableCopy="false"></inject>**
+   - API Key: <Paste the KEY 1 value here that you copied in previous step>
+   - API Base: <Paste the Endpoint value here that you copied in previous step>
+   - API type: **azure**
+   - API version: Keep it as default
+   - Select **Save**
 
 ### Task 2: Clone an existing prompt flow
-
-1. Click on **Prompt flow** in the left navigation in **Machine Learning Studio**.
-
-   ![Access Your VM and Lab Guide](../media/openai_3_1.png)
    
-2. Click on the **Flows tab** and click **Create**.
+1. Now select the **Flows (1)** tab and click **+ Create (2)**.
 
-   ![Access Your VM and Lab Guide](../media/openai_3.png)
+   ![Access Your VM and Lab Guide](../media/flow.png)
  
-3. Click **Clone** under **Chat with Wikipedia**.
+1. On the **Create a new flow** page, under **Explore gallery**, in **Chat with Wikipedia (1)** box select **Clone (2)**.
 
-   ![Access Your VM and Lab Guide](../media/openai_4.png)
+   ![Access Your VM and Lab Guide](../media/chatwithclone.png)
    
-4. Name it **chat_wiki** and Press **Clone**
-
-   ![Access Your VM and Lab Guide](../media/openai_5.png)
+1. On the **Clone flow**, name the folder name as **chat_wiki** and press **Clone**
    
-5. Set the **Connection** and **deployment_name** to **gpt35** and set the **max_tokens property** of the deployment_name to 256, for the following 
-    steps:
-    - extract_query_from_question
-    - augmented_chat
+1. Set the **Connection** and **deployment_name** to **gpt35** and set the **max_tokens** property of the deployment_name to **256**, for the following steps:
+   - extract_query_from_question
+   - augmented_chat
   
-   ![Access Your VM and Lab Guide](../media/openai_08_9.png)
+      ![Access Your VM and Lab Guide](../media/openai_08_9.png)
 
-   ![Access Your VM and Lab Guide](../media/openai_11-1.png)
+      ![Access Your VM and Lab Guide](../media/openai_11-1.png)
    
-6. Click on **Save**.
+6. Click on **Save (1)** and click on **Start run-time session (2)**.
 
-### Task 3: Add runtime & Test the flow
-
-1. Click on **Start run-time session**.
-
-   ![Access Your VM and Lab Guide](../media/openai_10-1.png)
+   ![Access Your VM and Lab Guide](../media/save.png)
 
    >**Note**: Wait for the compute session to complete , it takes 1-3 minutes.
 
-2. Execute all the nodes once the current node has completed its run.
+### Task 3: Add runtime & Test the flow
+
+1. Select **Run** to execute all the nodes after the current node has completed its run.
 
    ![Access Your VM and Lab Guide](../media/openai_12.png)
    
-   >**Note**: Use the scrollbar or down arrow button to navigate down the page, ensuring the graph flow remains unchanged.
+      >**Note**: Use the scrollbar or down arrow button to navigate down the page, ensuring the graph flow remains unchanged.
 
-4. Click on **Chat** on the UI
+4. After executing all the nodes, select **Chat (1)** button.
 
-   ![Access Your VM and Lab Guide](../media/openai_13.png)
+   ![Access Your VM and Lab Guide](../media/chat.png)
    
 6. Enter a question : `What is the difference between this model and previous neural network?` , Wait for the output to be generated, then check the answer and the number of tokens used.
+
+   ![Access Your VM and Lab Guide](../media/trace.png)
 
 ## Review
 In this lab you have completed the following tasks:
