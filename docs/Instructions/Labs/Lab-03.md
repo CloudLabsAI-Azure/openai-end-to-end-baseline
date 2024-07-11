@@ -13,7 +13,7 @@ In this lab, you will perform the following:
 
 ### Task 1: Deploy the flow to Azure App Service option
 
-1. Open the Prompt flow UI in Azure Machine Learning Studio
+1. Open the **Prompt flow UI** in Azure Machine Learning Studio
 
 2. Expand the **Files** tab in the right pane of the UI
 
