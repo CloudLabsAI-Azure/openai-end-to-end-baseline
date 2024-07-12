@@ -70,4 +70,4 @@ Welcome to your Openai end to end baseline Workshop! We've prepared a seamless e
  
    ![Start Your Azure Journey](../media/sc900-image(3).png)
  
-Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
+<br>Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
