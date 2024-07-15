@@ -334,7 +334,7 @@ resource machineLearning 'Microsoft.MachineLearningServices/workspaces@2023-10-0
     properties: {
       authMode: 'Key'
       description: 'Managed online endpoint for the /score API, to be used by the Chat UI app.'
-      publicNetworkAccess: 'Disabled'
+      publicNetworkAccess: 'Enabled'
     }
     dependsOn: [
       // Role requirements for the online endpoint: https://learn.microsoft.com/azure/machine-learning/how-to-access-resources-from-endpoints-managed-identities#give-access-permission-to-the-managed-identity
