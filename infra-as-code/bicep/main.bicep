@@ -56,7 +56,6 @@ module networkModule 'network.bicep' = {
   }
 }
 
-/* 
 @description('Deploys Azure Bastion and the jump box, which is used for private access to the Azure ML and Azure OpenAI portals.')
 module jumpBoxModule 'jumpbox.bicep' = {
   name: 'jumpBoxDeploy'
@@ -69,7 +68,6 @@ module jumpBoxModule 'jumpbox.bicep' = {
     jumpBoxAdminPassword: jumpBoxAdminPassword
   }
 }
-*/
 
 // Deploy storage account with private endpoint and private DNS zone
 module storageModule 'storage.bicep' = {
