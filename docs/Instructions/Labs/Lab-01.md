@@ -37,8 +37,8 @@ In this lab, you will perform the following:
    - Provider: **Azure OpenAI**
    - Subscription Id: Select the default
    - Azure OpenAI Account Names: **oai-<inject key="DeploymentID" enableCopy="false"></inject>**
-   - API Key: <Paste the KEY 1 value here that you copied in previous step>
-   - API Base: <Paste the Endpoint value here that you copied in previous step>
+   - API Key: Paste the KEY 1 value here that you copied in previous step
+   - API Base: Paste the Endpoint value here that you copied in previous step
    - API type: **azure**
    - API version: Keep it as default
    - Select **Save**
@@ -63,11 +63,11 @@ In this lab, you will perform the following:
 
     ![Access Your VM and Lab Guide](../media/openai_11-1.png)
    
-6. Click on **Save (1)** and click on **Start run-time session (2)**.
+6. Click on **Save (1)** and click on **Start compute session (2)**.
 
    ![Access Your VM and Lab Guide](../media/save.png)
 
->**Note**: Wait for the compute session to complete , it takes 1-3 minutes.
+     >**Note**: Wait for the compute session to complete , it takes 1-3 minutes.
 
 ### Task 3: Add runtime & Test the flow
 
@@ -75,7 +75,7 @@ In this lab, you will perform the following:
 
    ![Access Your VM and Lab Guide](../media/openai_12.png)
    
->**Note**: Use the scrollbar or down arrow button to navigate down the page, ensuring the graph flow remains unchanged.
+     >**Note**: Use the scrollbar or down arrow button to navigate down the page, ensuring the graph flow remains unchanged.
 
 4. After executing all the nodes, select **Chat (1)** button.
 
@@ -84,6 +84,12 @@ In this lab, you will perform the following:
 6. Enter a question : `What is the difference between this model and previous neural network?` , Wait for the output to be generated, then check the answer and the number of tokens used.
 
    ![Access Your VM and Lab Guide](../media/trace.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+<validation step="a191a267-12d7-4c02-a757-1bff8a5daa07" />
 
 ## Review
 In this lab you have completed the following tasks:
