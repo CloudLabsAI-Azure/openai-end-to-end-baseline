@@ -44,6 +44,8 @@ In this lab, you will perform the following:
     - Click **New** and add this path: **C:\LabFiles\Anaconda3\Scripts**.
     
     - Click **OK** three times to close all windows.
+  
+    - Re-open **Visual studio code**, and perform these commands, to active the conda.
 
     ```
     conda init
@@ -121,6 +123,10 @@ In this lab, you will perform the following:
 1. In the visual studio code open the **Git Bash** terminal, build and push the container image by running these following commands from the dist folder in your terminal:
 
     ```
+    cd dist
+    ```
+    
+    ```
     az login
     ```
     ```
@@ -142,6 +148,8 @@ In this lab, you will perform the following:
     az acr build -t $FULL_IMAGE_NAME -r $NAME_OF_ACR .
     ```
 
+    >**Note:** If the error shows that **Run Failed**, navigate to the **Azure Portal**, in the search bar search and select **cr<inject key="DeploymentID" enableCopy="false"></inject>**, from the left navigation pane, select **Networking**, select **All networks** in **Public network access**, and select **Save**. Navigate to the visual studio code, and re-run the previous command.
+
 ### Task 3 : Host the chat flow container image in Azure App Service
 
 1. Perform the following steps to deploy the container image to Azure App Service:
@@ -149,7 +157,7 @@ In this lab, you will perform the following:
 2. Set the container image on the pf App Service
 
     ```
-    PF_APP_SERVICE_NAME="app-$BASE_NAME-pf"
+    PF_APP_SERVICE_NAME="app-<inject key="DeploymentID" enableCopy="false"></inject>-pf"
     RESOURCE_GROUP="ODL-Openai-<inject key="DeploymentID" enableCopy="false"></inject>-02"
     ACR_IMAGE_NAME="$NAME_OF_ACR.azurecr.io/$ACR_CONTAINER_NAME/$IMAGE_NAME:$IMAGE_TAG"
     
@@ -160,7 +168,7 @@ In this lab, you will perform the following:
 3. Modify the configuration setting in the App Service that has the chat UI and point it to your deployed promptflow endpoint hosted in App Service instead of the managed online endpoint.
 
     ```
-    UI_APP_SERVICE_NAME="app-$BASE_NAME"
+    UI_APP_SERVICE_NAME="app-<inject key="DeploymentID" enableCopy="false"></inject>"
     ENDPOINT_URL="https://$PF_APP_SERVICE_NAME.azurewebsites.net/score"
     
     az webapp config appsettings set --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP --settings chatApiEndpoint=$ENDPOINT_URL
