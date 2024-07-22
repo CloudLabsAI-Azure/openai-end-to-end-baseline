@@ -16,11 +16,7 @@ In this lab, you will perform the following:
 
     ![Access Your VM and Lab Guide](../media/deploy.png)
 
-5. On the **Deploy chat_wiki** page, choose **New (1)**.
-
-    ![Access Your VM and Lab Guide](../media/exisiting.png)
-   
-7. Follow the instructions to create a deployment:
+1. On the **Deploy chat_wiki** page, choose **New (1)**, follow the instructions to create a deployment:
 
    - Endpoint name: **ept<inject key="DeploymentID" enableCopy="false"></inject> (2)**
      
