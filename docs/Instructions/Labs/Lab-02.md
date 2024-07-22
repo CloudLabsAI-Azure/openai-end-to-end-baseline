@@ -16,27 +16,25 @@ In this lab, you will perform the following:
 
     ![Access Your VM and Lab Guide](../media/deploy.png)
 
-5. On the **Deploy chat_wiki** page, choose **Existing (1)** endpoint and select **ept-<inject key="DeploymentID" enableCopy="false"></inject> (2)** endpoint.
+5. On the **Deploy chat_wiki** page, choose **New (1)**.
 
     ![Access Your VM and Lab Guide](../media/exisiting.png)
    
 7. Follow the instructions to create a deployment:
-    
-    - Deployment name: **eptdeploy-<inject key="DeploymentID" enableCopy="false"></inject> (1)**.
-   
-   - Virtual machine: **Standard_D2as_v4 (2)**
-   
-   - Instance count: **2 (3)**
-   
-   - Select **Review + Create (4)**
 
-        ![Access Your VM and Lab Guide](../media/deploymentname.png)
+   - Endpoint name: **ept<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+     
+   - Deployment name: **eptdeploy-<inject key="DeploymentID" enableCopy="false"></inject> (3)**.
+   
+   - Virtual machine: **Select the virtual machine which is in less cost, for example: D2as_v4, D2a_v4 (4)**
+   
+   - Instance count: **2 (5)**
+   
+   - Select **Review + Create (6)**
+
+        ![Access Your VM and Lab Guide](../media/d2asv4.png)
     
     - Select **Create**
-
-        >**Note:** You might need to scroll down to view the options above.
-
-        >**Note:** If the pop-up states that **Prompt flow deployment "eptdeploy-<inject key="DeploymentID" enableCopy="false"></inject>" of endpoint "ept-1402017" failed**, select **Endpoints** from the left navigation pane, and check whether the endpoint with the name **eptdeploy-<inject key="DeploymentID" enableCopy="false"></inject>** was created. If it is there, please ignore the message.
     
 ### Task 2: Publish the Chat front-end web app
 
@@ -50,13 +48,23 @@ In this lab, you will perform the following:
 
 1. In **Search resources, services and docs** search and select for **app-<inject key="DeploymentID" enableCopy="false"></inject>**. From the left navigation menu, under **Settings** select **Environment variables**.
    
-4. On the **app-<inject key="DeploymentID" enableCopy="false"></inject> | Environment variables**, select WEBSITE_RUN_FROM_PACKAGE and set the environment variable with the **SAS URL (1)** of the zip file that you copied in previous step, and select **Apply (2)**.
+1. On the **app-<inject key="DeploymentID" enableCopy="false"></inject> | Environment variables**, select WEBSITE_RUN_FROM_PACKAGE and set the environment variable with the **SAS URL (1)** of the zip file that you copied in previous step, and select **Apply (2)**.
 
    ![Access Your VM and Lab Guide](../media/websiteapply.png)
+
+1. Inside the Lab-VM, open **C:\Windows\System32\drivers\etc**, right-click on the **hosts** text file, and open it with Notepad. Under the example line, add the Public IP address of the **app-<inject key="DeploymentID" enableCopy="false"></inject>**, and the default domain. as shown in the attached image. After adding it select **Save**.
+
+   ![Access Your VM and Lab Guide](../media/appid.png)
   
 1. Navigate to the overview of **app-<inject key="DeploymentID" enableCopy="false"></inject>** and browse to the site listed under **Default domain** (e.g., https://www.app-1399374.azurewebsites.net.com). The site will look similar to the image attached below.
 
    ![Access Your VM and Lab Guide](../media/openai-main-13.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+<validation step="bc1076dc-0395-45bd-ab87-150b43d617e5" />
    
 ## Review
 In this lab you have completed the following tasks:
