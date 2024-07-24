@@ -40,7 +40,7 @@ var openAIApiKey = '@Microsoft.KeyVault(SecretUri=https://${keyVaultName}.vault.
 
 var appServicePlanSettings = {
   Basic: {
-    name: 'B1'
+    name: 'B3'
     capacity: 1
   }
 }
