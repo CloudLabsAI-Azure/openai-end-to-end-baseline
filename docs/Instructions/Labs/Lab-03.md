@@ -192,6 +192,10 @@ In this lab, you will perform the following:
 
    ![Access Your VM and Lab Guide](../media/pic4.png)
 
+7. Engage in a conversation with the bot to find the response.
+
+   ![Access Your VM and Lab Guide](../media/pic4-5.png)
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
