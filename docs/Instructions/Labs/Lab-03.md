@@ -181,7 +181,15 @@ In this lab, you will perform the following:
     az webapp config appsettings set --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP --settings chatApiEndpoint=$ENDPOINT_URL
     az webapp restart --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP
     ```
-5. Validate the client application that is now pointing at the flow deployed in a container still works.
+
+4. In the web **app-<inject key="DeploymentID" enableCopy="false"></inject>**, Under API  choose **CORS** , Update the link `https://portal.azure.com`
+
+   ![Access Your VM and Lab Guide](../media/pic3-1.png)
+
+5. Repeat the steps for web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf** .
+   
+   
+4. Validate the client application that is now pointing at the flow deployed in a container still works.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
