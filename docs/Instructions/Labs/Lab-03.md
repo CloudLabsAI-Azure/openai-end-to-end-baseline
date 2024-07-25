@@ -84,6 +84,9 @@ In this lab, you will perform the following:
 
 10. Enter the following values in the file:
 
+     - API Key: Paste the KEY 1 value here that you copied .
+     - API Base: Paste the Endpoint value here that you copied .
+
     ```
     $schema: https://azuremlschemas.azureedge.net/promptflow/latest/AzureOpenAIConnection.schema.json
     name: gpt35
@@ -93,9 +96,10 @@ In this lab, you will perform the following:
     api_type: "azure"
     api_version: "2023-07-01-preview"
     ```
+
     >**Note**:The App Service is configured with App Settings that surface as environment variables for OPENAICONNECTION_API_KEY and OPENAICONNECTION_API_BASE.
 
-11. Now, build the flow by running these commands:
+12. Now, build the flow by running these commands:
     
     ```
     pf connection create -f .\connections\gpt35.yaml
