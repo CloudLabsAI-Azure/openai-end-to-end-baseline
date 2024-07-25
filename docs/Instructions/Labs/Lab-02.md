@@ -49,11 +49,22 @@ In this lab, you will perform the following:
 
    ![Access Your VM and Lab Guide](../media/websiteapply.png)
 
+## Task 3 : Validate the web app.
+
+1. Get the public IP address of the Application Gateway.
+    ```
+    $RESOURCE_GROUP="ODL-Openai-<inject key="DeploymentID" enableCopy="false"></inject>-02"
+    # query the Azure Application Gateway Public Ip
+    $APPGW_PUBLIC_IP=az network public-ip show --resource-group $RESOURCE_GROUP --name "pip-<inject key="DeploymentID"enableCopy="false</inject> " --query [ipAddress] --output tsv
+    echo APPGW_PUBLIC_IP: $APPGW_PUBLIC_IP
+    
+    ```
 1. Inside the Lab-VM, open **C:\Windows\System32\drivers\etc**, right-click on the **hosts** text file, and open it with Notepad. Under the example line, add the Public IP address of the **app-<inject key="DeploymentID" enableCopy="false"></inject>**, and the default domain. as shown in the attached image. After adding it select **Save**.
 
    ![Access Your VM and Lab Guide](../media/appid.png)
   
-1. Navigate to the overview of **app-<inject key="DeploymentID" enableCopy="false"></inject>** and browse to the site listed under **Default domain** (e.g., https://www.app-1399374.azurewebsites.net.com). The site will look similar to the image attached below.
+1. Navigate to the overview of **app-<inject key="DeploymentID" enableCopy="false"></inject>** and browse to the site listed under **Default domain**<br>
+   (e.g., https://www.app-1399374.azurewebsites.net.com). The site will look similar to the image attached below.
 
    ![Access Your VM and Lab Guide](../media/openai-main-13.png)
 
