@@ -130,23 +130,14 @@ In this lab, you will perform the following:
     az login
     ```
     ```
-    NAME_OF_ACR="cr<inject key="DeploymentID" enableCopy="false"></inject>"
-    ```
-    ```
-    ACR_CONTAINER_NAME="aoai"
-    ```
-    ```
-    IMAGE_NAME="wikichatflow"
-    ```
-    ```
-    IMAGE_TAG="1.1"
-    ```
-    ```
-    FULL_IMAGE_NAME="$ACR_CONTAINER_NAME/$IMAGE_NAME:$IMAGE_TAG"
-    ```
-    ```
+    $NAME_OF_ACR="cr<inject key="DeploymentID" enableCopy="false"></inject>"
+    $ACR_CONTAINER_NAME="aoai"
+    $IMAGE_NAME="wikichatflow"
+    $IMAGE_TAG="1.1"
+    $FULL_IMAGE_NAME=$ACR_CONTAINER_NAME+"/"+$IMAGE_NAME+":"+$IMAGE_TAG
     az acr build -t $FULL_IMAGE_NAME -r $NAME_OF_ACR .
     ```
+    
 
     >**Note:** If the error shows that **Run Failed**, navigate to the **Azure Portal**, in the search bar search and select **cr<inject key="DeploymentID" enableCopy="false"></inject>**, from the left navigation pane, select **Networking**, select **All networks** in **Public network access**, and select **Save**. Navigate to the visual studio code, and re-run the previous command.
 
