@@ -186,10 +186,11 @@ In this lab, you will perform the following:
 
    ![Access Your VM and Lab Guide](../media/pic3-1.png)
 
-5. Repeat the steps for web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf** .
-   
-   
-4. Validate the client application that is now pointing at the flow deployed in a container still works.
+5. Repeat the steps for web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf**.
+      
+6. Validate the web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf** , Click on **Browse**.
+
+   ![Access Your VM and Lab Guide](../media/pic4.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
