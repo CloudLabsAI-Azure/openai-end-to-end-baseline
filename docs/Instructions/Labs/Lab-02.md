@@ -61,7 +61,7 @@ In this lab, you will perform the following:
     ```
 1. Inside the Lab-VM, open **C:\Windows\System32\drivers\etc**, right-click on the **hosts** text file, and open it with Notepad. Under the example line, add the Public IP address of the **app-<inject key="DeploymentID" enableCopy="false"></inject>**, and the default domain. as shown in the attached image. After adding it select **Save**.
 
-   ![Access Your VM and Lab Guide](../media/appid.png)
+   ![Access Your VM and Lab Guide](../media/save4.png)
   
 1. Navigate to the overview of **app-<inject key="DeploymentID" enableCopy="false"></inject>** and browse to the site listed under **Default domain**<br>
    (e.g., https://www.app-1399374.azurewebsites.net.com). The site will look similar to the image attached below.
