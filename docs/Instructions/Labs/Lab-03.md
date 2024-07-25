@@ -112,8 +112,18 @@ In this lab, you will perform the following:
 1. Ensure the **requirements.txt** in the **dist/flow** folder has the appropriate requirements. At the time of writing, they were as follows:
 
     ```
-    promptflow[azure]
-    promptflow-tools==0.1.0.b5
+    azure-ai-ml==1.15.0
+    promptflow-azure>=1.12.0
+    azure-ai-resources>=1.0.0b8
+    azure-ai-generative[promptflow]>=1.0.0b8
+    promptflow-azure>=1.12.0
+    promptflow>=1.12.0
+    promptflow-tools>=1.4.0
+    promptflow-evals>=0.3.0
+    azure-identity==1.16.0
+    python-dotenv>=1.0.0
+    azureml-mlflow>=1.53.0
+    keyrings.alt
     python-dotenv
     bs4
     openai
@@ -148,9 +158,9 @@ In this lab, you will perform the following:
 2. Set the container image on the pf App Service
 
     ```
-    PF_APP_SERVICE_NAME="app-<inject key="DeploymentID" enableCopy="false"></inject>-pf"
-    RESOURCE_GROUP="ODL-Openai-<inject key="DeploymentID" enableCopy="false"></inject>-02"
-    ACR_IMAGE_NAME="$NAME_OF_ACR.azurecr.io/$ACR_CONTAINER_NAME/$IMAGE_NAME:$IMAGE_TAG"
+    $PF_APP_SERVICE_NAME="app-<inject key="DeploymentID" enableCopy="false"></inject>-pf"
+    $RESOURCE_GROUP="ODL-Openai-<inject key="DeploymentID" enableCopy="false"></inject>-02"
+    $ACR_IMAGE_NAME="$NAME_OF_ACR.azurecr.io/$ACR_CONTAINER_NAME/$IMAGE_NAME:$IMAGE_TAG"
     
     az webapp config container set --name $PF_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP --docker-custom-image-name $ACR_IMAGE_NAME --docker-registry-server-url https://$NAME_OF_ACR.azurecr.io
     az webapp deployment container config --enable-cd true --name $PF_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP
@@ -158,14 +168,16 @@ In this lab, you will perform the following:
     
 3. Modify the configuration setting in the App Service that has the chat UI and point it to your deployed promptflow endpoint hosted in App Service instead of the managed online endpoint.
 
-    ```
-    UI_APP_SERVICE_NAME="app-<inject key="DeploymentID" enableCopy="false"></inject>"
-    ENDPOINT_URL="https://$PF_APP_SERVICE_NAME.azurewebsites.net/score"
+
+   ```
+    $RESOURCE_GROUP="ODL-Openai-<inject key="DeploymentID" enableCopy="false"></inject>-02"
+    $UI_APP_SERVICE_NAME="app-<inject key="DeploymentID" enableCopy="false"></inject>"
+    $ENDPOINT_URL="https://$PF_APP_SERVICE_NAME.azurewebsites.net/score"
     
     az webapp config appsettings set --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP --settings chatApiEndpoint=$ENDPOINT_URL
     az webapp restart --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP
     ```
-4. Validate the client application that is now pointing at the flow deployed in a container still works.
+5. Validate the client application that is now pointing at the flow deployed in a container still works.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
