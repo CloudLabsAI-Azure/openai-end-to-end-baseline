@@ -18,19 +18,20 @@ In this lab, you will perform the following:
 
 1. On the **Deploy chat_wiki** page, choose **New (1)**, follow the instructions to create a deployment:
 
-   - Endpoint name: **ept<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+   - Endpoint name: **mlw-<inject key="DeploymentID" enableCopy="false"></inject>-ep (2)**
      
-   - Deployment name: **eptdeploy-<inject key="DeploymentID" enableCopy="false"></inject> (3)**.
+   - Deployment name: **mlw-<inject key="DeploymentID" enableCopy="false"></inject>-ep-1 (3)**.
    
    - Virtual machine: **Select the virtual machine which is in less cost, for example: D2as_v4, D2a_v4 (4)**
    
-   - Instance count: **2 (5)**
+   - Instance count: **1 (5)**
    
    - Select **Review + Create (6)**
 
-        ![Access Your VM and Lab Guide](../media/d2asv4.png)
+        ![Access Your VM and Lab Guide](../media/save1.png)
     
     - Select **Create**
+    
     
 ### Task 2: Publish the Chat front-end web app
 
