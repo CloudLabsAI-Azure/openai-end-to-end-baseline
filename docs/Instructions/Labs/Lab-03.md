@@ -204,7 +204,7 @@ In this lab, you will perform the following:
 
    ![Access Your VM and Lab Guide](../media/pic3-1.png)
 
-5. Repeat the steps for web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf**.
+5. Repeat the step 4 for web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf**.
       
 6. Validate the web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf** , Click on **Browse**.
 
