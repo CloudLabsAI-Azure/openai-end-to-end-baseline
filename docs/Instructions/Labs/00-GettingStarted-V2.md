@@ -24,13 +24,13 @@ The objective of these labs is to guide participants through creating, deploying
 
 The labs utilize the Azure OpenAI Service API for creating and testing prompt flows, Azure Machine Learning for deploying and managing online endpoints, and Azure App Service for hosting the chat flow web app and container image. Resources include Azure CLI or Azure Portal for deployment and management, and containerization tools for building and pushing images.
 
-  ![Access Your VM and Lab Guide](../media/acr_dia.png)
+   ![Access Your VM and Lab Guide](../media/acr_dia.png)
  
 ## Accessing Your Lab Environment
  
 1. Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-    ![Access Your VM and Lab Guide](../media/labguide-1.png)
+   ![Access Your VM and Lab Guide](../media/labguide-1.png)
 
  ### Virtual Machine & Lab Guide
  
@@ -40,19 +40,19 @@ The labs utilize the Azure OpenAI Service API for creating and testing prompt fl
  
 1. To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
  
-    ![Explore Lab Resources](../media/env-1.png)
+   ![Explore Lab Resources](../media/env-1.png)
  
 ## Utilizing the Split Window Feature
  
  1. For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-     ![Use the Split Window Feature](../media/spl.png)
+    ![Use the Split Window Feature](../media/spl.png)
  
 ## Managing Your Virtual Machine
  
  1. Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-     ![Manage Your Virtual Machine](../media/res.png)
+    ![Manage Your Virtual Machine](../media/res.png)
 
 ## **Lab Duration Extension**
 
