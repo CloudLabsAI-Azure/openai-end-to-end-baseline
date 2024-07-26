@@ -1,4 +1,4 @@
-# Lab 01: Open AI end to end baseline
+# Lab 01: Managing and Enhancing Prompt Flows
 
 ## Lab scenario
 In this lab, you will engage in a series of steps aimed at creating, testing, and deploying a prompt flow using Azure Machine Learning Studio. This process begins with establishing a connection to Azure OpenAI, followed by the cloning of an existing prompt flow. Subsequently, you will configure this cloned flow to meet specific requirements or objectives. Finally, the flow will undergo testing to ensure its functionality and effectiveness before being deployed for practical use.

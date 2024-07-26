@@ -1,4 +1,4 @@
-# Lab 02: OpenAI end to end baseline
+# Lab 02: Deploying to Azure Machine Learning Endpoints and Publishing Web Applications
 
 ## Lab scenario
 In this lab, you will walk through the process of deploying a machine learning model to an Azure Machine Learning managed online endpoint and publishing a front-end web application to interact with the deployed model. This hands-on experience covers key aspects of the deployment pipeline, including creating and configuring resources on Azure, uploading necessary files, and setting up environment variables.

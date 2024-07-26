@@ -1,4 +1,4 @@
-# Lab 03: Openai end to end baseline
+# Lab 03: Deploying and Managing Chat Flow Containers on Azure App Service
 
 ## Lab scenario
 In this lab, you'll deploy an Azure OpenAI prompt flow to Azure App Service. Start by downloading the prompt flow as a zip from Azure ML Studio. Set up a Python environment using Conda, configure connections in YAML files, and build the flow into a Docker container with `pf flow build`. Push the image to your Azure Container Registry and deploy it to App Service. Update the chat UI's configuration to use the deployed prompt flow endpoint (`https://$PF_APP_SERVICE_NAME.azurewebsites.net/score`) and verify client application functionality.
