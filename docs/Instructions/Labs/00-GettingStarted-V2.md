@@ -70,7 +70,7 @@ The labs utilize the Azure OpenAI Service API for creating and testing prompt fl
 
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:<br>
+1. On your virtual machine, click on the Azure Portal icon as shown below<br>
 
  
    ![Launch Azure Portal](../media/sc900-image(1).png)
@@ -92,7 +92,7 @@ The labs utilize the Azure OpenAI Service API for creating and testing prompt fl
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
  
-6. Click "Next" from the bottom right corner to embark on your Lab journey!
+6. Click "Next" from the bottom right corner to embark on your Lab journey!<br>
  
    ![Start Your Azure Journey](../media/sc900-image(3).png)
  
