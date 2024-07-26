@@ -134,7 +134,25 @@ In this lab, you will perform the following:
     ```
 1. Ensure the connections folder with the connection was created in the dist folder. If not, copy the connections folder, along with the connection file to the dist folder.
 
-1. In the visual studio code open the **Git Bash** terminal, build and push the container image by running these following commands from the dist folder in your terminal:
+1. From the search bar on the desktop, search for **Environment variables** and select **Edit the system environment variables**.
+  
+    - In the **System Properties** window, select **Environment variables**.
+
+    - Under **System variables**, select **New** .
+    
+    - Set **Variable Name** as `OPENAICONNECTION_API_KEY` and **Variable Value** set its value to the OpenAI key you copied in Notepad.
+    
+    - Select **New**
+      
+    - Set **Variable Name** as `OPENAICONNECTION_API_BASE` and **Variable Value** set its value to the OpenAI enpoint you copied Notepad.
+      
+    - Select **New**
+
+    - Set **Variable Name** as `GPT35_API_KEY` and **Variable Value** set its value to the OpenAI key you copied Notepad.
+  
+    - Click **OK** three times to close all windows.
+      
+1. In the visual studio code open the **Powershell** terminal, build and push the container image by running these following commands from the dist folder in your terminal:
 
     ```
     cd dist
