@@ -8,7 +8,7 @@ In this lab, you will perform the following:
 - Task 1: Deploy to Azure Machine Learning managed online endpoint
 - Task 2: Publish the Chat front-end web app
 
-## Estimated timing:
+## Estimated timing:80 minutes
 
 ### Task 1: Deploy to Azure Machine Learning managed online endpoint
 
@@ -18,19 +18,20 @@ In this lab, you will perform the following:
 
 1. On the **Deploy chat_wiki** page, choose **New (1)**, follow the instructions to create a deployment:
 
-   - Endpoint name: **ept<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+   - Endpoint name: **mlw-<inject key="DeploymentID" enableCopy="false"></inject>-ep (2)**
      
-   - Deployment name: **eptdeploy-<inject key="DeploymentID" enableCopy="false"></inject> (3)**.
+   - Deployment name: **mlw-<inject key="DeploymentID" enableCopy="false"></inject>-ep-1 (3)**.
    
    - Virtual machine: **Select the virtual machine which is in less cost, for example: D2as_v4, D2a_v4 (4)**
    
-   - Instance count: **2 (5)**
+   - Instance count: **1 (5)**
    
    - Select **Review + Create (6)**
 
-        ![Access Your VM and Lab Guide](../media/d2asv4.png)
+        ![Access Your VM and Lab Guide](../media/save1.png)
     
     - Select **Create**
+    
     
 ### Task 2: Publish the Chat front-end web app
 
@@ -48,13 +49,40 @@ In this lab, you will perform the following:
 
    ![Access Your VM and Lab Guide](../media/websiteapply.png)
 
+1. Choose the `chatApiKey` and set the environment variable with the OpenAI Key that you copied in Notepad.
+
+   ![Access Your VM and Lab Guide](../media/chat_api1.png)
+   
+1. In **Search resources, services and docs** search and select for **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf**. From the left navigation menu, under **Settings** select **Environment variables**.
+
+1. On the **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf | Environment variables**, select `OPENAICONNECTION_API_KEY` and set the environment variable with OpenAI Key that you copied in Notepad.
+
+   ![Access Your VM and Lab Guide](../media/chat_api3.png)
+   
+1. On the **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf | Environment variables**, Click **"Add"** to create a new environment variable named `GPT35_API_KEY`, and set its value to the OpenAI key you copied in Notepad.
+
+   ![Access Your VM and Lab Guide](../media/chat_api2.png)
+
+1. Click on Apply and save the changes.
+   
+## Task 3 : Validate the web app.
+
+1. Get the public IP address of the Application Gateway.
+    ```
+    $RESOURCE_GROUP="ODL-Openai-<inject key="DeploymentID" enableCopy="false"></inject>-02"
+    # query the Azure Application Gateway Public Ip
+    $APPGW_PUBLIC_IP=az network public-ip show --resource-group $RESOURCE_GROUP --name "pip-<inject key="DeploymentID"enableCopy="false</inject> " --query [ipAddress] --output tsv
+    echo APPGW_PUBLIC_IP: $APPGW_PUBLIC_IP
+    
+    ```
 1. Inside the Lab-VM, open **C:\Windows\System32\drivers\etc**, right-click on the **hosts** text file, and open it with Notepad. Under the example line, add the Public IP address of the **app-<inject key="DeploymentID" enableCopy="false"></inject>**, and the default domain. as shown in the attached image. After adding it select **Save**.
 
-   ![Access Your VM and Lab Guide](../media/appid.png)
+   ![Access Your VM and Lab Guide](../media/save4.png)
   
-1. Navigate to the overview of **app-<inject key="DeploymentID" enableCopy="false"></inject>** and browse to the site listed under **Default domain** (e.g., https://www.app-1399374.azurewebsites.net.com). The site will look similar to the image attached below.
+1. Navigate to the overview of **app-<inject key="DeploymentID" enableCopy="false"></inject>** and browse to the site listed under **Default domain**<br>
+   (e.g., https://www.app-1399374.azurewebsites.net.com). The site will look similar to the image attached below.
 
-   ![Access Your VM and Lab Guide](../media/openai-main-13.png)
+   ![Access Your VM and Lab Guide](../media/save2.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.

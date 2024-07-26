@@ -9,7 +9,7 @@ In this lab, you will perform the following:
 - Task 2: Clone an existing prompt flow
 - Task 3: Add runtime & Test the flow
 
-## Estimated timing:
+## Estimated timing:80 minutes
 
 ### Task 1: Create, test, and deploy a Prompt flow
 
