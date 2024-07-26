@@ -8,7 +8,7 @@ In this lab, you will perform the following:
 - Task 1: Deploy to Azure Machine Learning managed online endpoint
 - Task 2: Publish the Chat front-end web app
 
-## Estimated timing:
+## Estimated timing:80 minutes
 
 ### Task 1: Deploy to Azure Machine Learning managed online endpoint
 
