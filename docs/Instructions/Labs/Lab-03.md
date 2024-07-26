@@ -9,7 +9,7 @@ In this lab, you will perform the following:
 - Task 2: Build and push the image
 - Task 3: Host the chat flow container image in Azure App Service
 
-## Estimated timing:
+## Estimated timing: 80 minutes
 
 ### Task 1: Deploy the flow to Azure App Service option
 
