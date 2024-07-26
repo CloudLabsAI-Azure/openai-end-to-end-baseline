@@ -46,14 +46,13 @@ The labs utilize the Azure OpenAI Service API for creating and testing prompt fl
  
  1. For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.<br>
     
- 
-   ![Use the Split Window Feature](../media/spl.png)
+    ![Use the Split Window Feature](../media/spl.png)
  
 ## Managing Your Virtual Machine
  
  1. Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. <br>
  
-   ![Manage Your Virtual Machine](../media/res.png)
+    ![Manage Your Virtual Machine](../media/res.png)
 
 ## **Lab Duration Extension**
 
@@ -71,17 +70,17 @@ The labs utilize the Azure OpenAI Service API for creating and testing prompt fl
 
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your virtual machine, click on the Azure Portal icon as shown below:<br>
  
    ![Launch Azure Portal](../media/sc900-image(1).png)
  
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:<br>
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
    ![Enter Your Username](../media/sc900-image-1.png)
  
-3. Next, provide your password:
+3. Next, provide your password:<br>
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
