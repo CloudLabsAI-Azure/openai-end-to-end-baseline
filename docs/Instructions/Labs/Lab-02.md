@@ -49,6 +49,22 @@ In this lab, you will perform the following:
 
    ![Access Your VM and Lab Guide](../media/websiteapply.png)
 
+1. Choose the `chatApiKey` and set the environment variable with the OpenAI Key that you copied in Notepad.
+
+   ![Access Your VM and Lab Guide](../media/chat_api1.png)
+   
+1. In **Search resources, services and docs** search and select for **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf**. From the left navigation menu, under **Settings** select **Environment variables**.
+
+1. On the **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf | Environment variables**, select `OPENAICONNECTION_API_KEY` and set the environment variable with OpenAI Key that you copied in Notepad.
+
+   ![Access Your VM and Lab Guide](../media/chat_api3.png)
+   
+1. On the **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf | Environment variables**, Click **"Add"** to create a new environment variable named `GPT35_API_KEY`, and set its value to the OpenAI key you copied in Notepad.
+
+   ![Access Your VM and Lab Guide](../media/chat_api2.png)
+
+1. Click on Apply and save the changes.
+   
 ## Task 3 : Validate the web app.
 
 1. Get the public IP address of the Application Gateway.
