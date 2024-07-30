@@ -68,6 +68,11 @@ In this lab, you will perform the following:
 ## Task 3 : Validate the web app.
 
 1. Get the public IP address of the Application Gateway.
+
+   ```
+   az login
+   ```
+   
     ```
     $RESOURCE_GROUP="ODL-Openai-<inject key="DeploymentID" enableCopy="false"></inject>-02"
     # query the Azure Application Gateway Public Ip
