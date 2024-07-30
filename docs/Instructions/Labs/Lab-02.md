@@ -71,9 +71,8 @@ In this lab, you will perform the following:
     ```
     $RESOURCE_GROUP="ODL-Openai-<inject key="DeploymentID" enableCopy="false"></inject>-02"
     # query the Azure Application Gateway Public Ip
-    $APPGW_PUBLIC_IP=az network public-ip show --resource-group $RESOURCE_GROUP --name "pip-<inject key="DeploymentID"enableCopy="false</inject> " --query [ipAddress] --output tsv
-    echo APPGW_PUBLIC_IP: $APPGW_PUBLIC_IP
-    
+    $APPGW_PUBLIC_IP=az network public-ip show --resource-group $RESOURCE_GROUP --name "pip-<inject key="DeploymentID" enableCopy="false"></inject>" --query [ipAddress] --output tsv
+    echo APPGW_PUBLIC_IP: $APPGW_PUBLIC_IP 
     ```
 1. Inside the Lab-VM, open **C:\Windows\System32\drivers\etc**, right-click on the **hosts** text file, and open it with Notepad. Under the example line, add the Public IP address of the **app-<inject key="DeploymentID" enableCopy="false"></inject>**, and the default domain. as shown in the attached image. After adding it select **Save**.
 
