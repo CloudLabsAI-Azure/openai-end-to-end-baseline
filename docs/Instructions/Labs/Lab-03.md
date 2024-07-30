@@ -190,7 +190,6 @@ In this lab, you will perform the following:
     
 3. Modify the configuration setting in the App Service that has the chat UI and point it to your deployed promptflow endpoint hosted in App Service instead of the managed online endpoint.
 
-
    ```
     $RESOURCE_GROUP="ODL-Openai-<inject key="DeploymentID" enableCopy="false"></inject>-02"
     $UI_APP_SERVICE_NAME="app-<inject key="DeploymentID" enableCopy="false"></inject>"
@@ -198,7 +197,8 @@ In this lab, you will perform the following:
     
     az webapp config appsettings set --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP --settings chatApiEndpoint=$ENDPOINT_URL
     az webapp restart --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP
-    ```
+   
+   ```
 
 4. In the web **app-<inject key="DeploymentID" enableCopy="false"></inject>**, Under API  choose **CORS** , Update the link `https://portal.azure.com`
 
@@ -218,7 +218,8 @@ In this lab, you will perform the following:
 > - If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-<validation step="98be4539-9dd7-4035-8b00-a464221c74c5" />
+
+ <validation step="98be4539-9dd7-4035-8b00-a464221c74c5" />
 
 ## Review
 In this lab you have completed the following tasks:
