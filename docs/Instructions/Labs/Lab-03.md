@@ -29,7 +29,7 @@ In this lab, you will perform the following tasks:
 
     >**Note:** On the **Do you trust the authors of the files in this folder** pop-up, select **Yes, I trust the authors**.
 
-1. From the top menu bar, select **View**, and then select **Terminal**. Perform the below commands in the terminal:
+1. From the top menu bar, select **View**, and then click on **Terminal**. Perform the below commands in the terminal:
 
    ```
     conda create --name pf python=3.11.4
@@ -45,9 +45,9 @@ In this lab, you will perform the following tasks:
       
       ![Editing the system variables](../media/envvar1.png)
 
-    - Under **System variables**, select **Path** and click **Edit**.
+    - Under **System variables**, select **Path** and click on **Edit**.
       
-    - Click **New** and add this path: **C:\LabFiles\Anaconda3\Scripts**.
+    - Click on **New** and add this path: **C:\LabFiles\Anaconda3\Scripts**.
     
     - Click **OK** three times to close all windows.
   
@@ -206,7 +206,7 @@ In this lab, you will perform the following tasks:
     az webapp restart --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP
     ```
 
-4. In the web **app-<inject key="DeploymentID" enableCopy="false"></inject>**, under API  choose **CORS**. Update the link: `https://portal.azure.com`.
+4. In the web **app-|CORS page<inject key="DeploymentID" enableCopy="false"></inject>**, choose **CORS (1)** under API. Update the link: `https://portal.azure.com` **(2)** and click on **Save (3)**.
 
    ![Access Your VM and Lab Guide](../media/pic3-1.png)
 
