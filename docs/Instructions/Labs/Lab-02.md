@@ -8,14 +8,14 @@ In this lab, you will walk through the process of deploying a machine learning m
 
 In this lab, you will perform the following tasks:
 
-- **Task 1:** Deploy to Azure Machine Learning managed online endpoint
+- **Task 1:** Deploy to Azure Machine Learning-managed online endpoint
 - **Task 2:** Publish the Chat front-end web app
 
 ## Estimated Timing: 80 Minutes
 
-### Task 1: Deploy to Azure Machine Learning Managed Online Endpoint
+### Task 1: Deploy to Azure Machine Learning-Managed Online Endpoint
 
-1. In the **chat_wiki** flow, create a deployment by selecting the **deploy** icon from the **toolbar**.
+1. In the **chat_wiki** flow, create a deployment by selecting the **deploy** icon from the toolbar.
 
     ![Access Your VM and Lab Guide](../media/deploy.png)
 
@@ -42,23 +42,23 @@ In this lab, you will perform the following tasks:
 
    ![Access Your VM and Lab Guide](../media/openai-main-11.png)
    
-1. In the **chatui.zip** page, select **Generate SAS** tab, and click on **Generate SAS token and URL**. Copy the **Blob SAS URL** and paste it in the notepad.
+1. In the **chatui.zip** page, select the **Generate SAS** tab, and click on **Generate SAS token and URL**. Copy the **Blob SAS URL** and paste it in the Notepad.
 
     ![Access Your VM and Lab Guide](../media/generatesastoken.png)
 
-1. In the **Search resources, services and docs** space search for and select **app-<inject key="DeploymentID" enableCopy="false"></inject>**. From the left navigation menu, under **Settings**, select **Environment variables**.
+1. In the **Search resources, services, and docs** space, search for and select **app-<inject key="DeploymentID" enableCopy="false"></inject>**. From the left navigation menu, under **Settings**, select **Environment variables**.
    
-1. On the **app-<inject key="DeploymentID" enableCopy="false"></inject> | Environment variables**, select WEBSITE_RUN_FROM_PACKAGE and set the environment variable with the **SAS URL (1)** of the zip file that you copied in the previous step. Moving on, select **Apply (2)**.
+1. On the **app-<inject key="DeploymentID" enableCopy="false"></inject> | Environment variables**, select **WEBSITE_RUN_FROM_PACKAGE** as the **Name** and set the environment variable with the **SAS URL (1)** of the zip file that you copied in the previous step. Moving on, select **Apply (2)**.
 
    ![Access Your VM and Lab Guide](../media/websiteapply.png)
 
-1. Choose the `chatApiKey` and set the **environment variable** with the **OpenAI Key** that you copied in the Notepad.
+1. Choose `chatApiKey` for **Name** and set the **environment variable** with the **OpenAI Key (1)** that you copied in the Notepad.
 
    ![Access Your VM and Lab Guide](../media/chat_api1.png)
    
-1. In the **Search resources, services and docs** space search for and select **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf**. From the left navigation menu, under **Settings** select **Environment variables**.
+1. In the **Search resources, services, and docs** space, search for and select **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf**. From the left navigation menu, under **Settings** select **Environment variables**.
 
-1. On the **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf | Environment variables**, select `OPENAICONNECTION_API_KEY` and set the environment variable with the **OpenAI key** that you copied in Notepad.
+1. On the **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf | Environment variables**, select `OPENAICONNECTION_API_KEY` for **Name** and set the **environment variable** with the **OpenAI key (1)** that you copied in Notepad.
 
    ![Access Your VM and Lab Guide](../media/chat_api3.png)
    
@@ -97,5 +97,5 @@ In this lab, you will perform the following tasks:
 
 In this lab, you have completed the following tasks:
 
-- Deployed to Azure Machine Learning managed online endpoint.
+- Deployed to an Azure Machine Learning managed online endpoint.
 - Published the chat front-end web app.
