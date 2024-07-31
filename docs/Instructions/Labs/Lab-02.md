@@ -25,7 +25,7 @@ In this lab, you will perform the following tasks:
      
    - Deployment name: **mlw-<inject key="DeploymentID" enableCopy="false"></inject>-ep-1 (3)**.
    
-   - Virtual machine: **Select the virtual machine which is less expensive. For example: D2as_v4, D2a_v4 (4)**
+   - Virtual machine: **Select the virtual machine that is less expensive. For example: D2as_v4, D2a_v4 (4)**.
    
    - Instance count: **1 (5)**
    
@@ -42,7 +42,7 @@ In this lab, you will perform the following tasks:
 
    ![Access Your VM and Lab Guide](../media/openai-main-11.png)
    
-1. In the **chatui.zip** page, select the **Generate SAS** tab, and click on **Generate SAS token and URL**. Copy the **Blob SAS URL** and paste it in the Notepad.
+1. In the **chatui.zip** page, select the **Generate SAS** tab, and click on **Generate SAS token and URL**. Copy the **Blob SAS URL** and paste it in Notepad.
 
     ![Access Your VM and Lab Guide](../media/generatesastoken.png)
 
@@ -97,5 +97,5 @@ In this lab, you will perform the following tasks:
 
 In this lab, you have completed the following tasks:
 
-- Deployed to an Azure Machine Learning managed online endpoint.
+- Deployed to an Azure Machine Learning-managed online endpoint.
 - Published the chat front-end web app.
