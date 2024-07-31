@@ -51,7 +51,7 @@ In this lab, you will perform the following tasks:
     
     - Click **OK** three times to close all windows.
   
-    - Re-open **Visual Studio Code**, and perform these commands to activate the conda.
+    - Re-open **Visual Studio Code** and perform these commands to activate the Conda.
 
     ```
     conda init
