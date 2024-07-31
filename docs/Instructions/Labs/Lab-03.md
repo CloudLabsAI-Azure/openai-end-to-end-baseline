@@ -1,19 +1,21 @@
 # Lab 03: Deploying and Managing Chat Flow Containers on Azure App Service
 
-## Lab scenario
-In this lab, you'll deploy an Azure OpenAI prompt flow to Azure App Service. Start by downloading the prompt flow as a zip from Azure ML Studio. Set up a Python environment using Conda, configure connections in YAML files, and build the flow into a Docker container with `pf flow build`. Push the image to your Azure Container Registry and deploy it to App Service. Update the chat UI's configuration to use the deployed prompt flow endpoint (`https://$PF_APP_SERVICE_NAME.azurewebsites.net/score`) and verify client application functionality.
+## Lab Scenario
+In this lab, you will deploy an Azure OpenAI prompt flow to Azure App Service. Start by downloading the prompt flow as a zip from Azure ML Studio. Set up a Python environment using Conda, configure connections in YAML files, and build the flow into a Docker container with `pf flow build`. Push the image to your Azure Container Registry and deploy it to App Service. Update the chat UI's configuration to use the deployed prompt flow endpoint (`https://$PF_APP_SERVICE_NAME.azurewebsites.net/score`) and verify client application functionality.
 
-## Lab objectives
-In this lab, you will perform the following:
-- Task 1: Deploy the flow to Azure App Service option
-- Task 2: Build and push the image
-- Task 3: Host the chat flow container image in Azure App Service
+## Lab Objectives
 
-## Estimated timing: 80 minutes
+In this lab, you will perform the following tasks:
 
-### Task 1: Deploy the flow to Azure App Service option
+- **Task 1:** Deploy the flow to Azure App Service option
+- **Task 2:** Build and push the image
+- **Task 3:** Host the chat flow container image in Azure App Service
 
-1. Navigate back to the **chat_wiki** tab, in Azure Machine Learning Studio.
+## Estimated Timing: 80 Minutes
+
+### Task 1: Deploy the Flow to Azure App Service Option
+
+1. Navigate back to the **chat_wiki** tab in **Azure Machine Learning Studio.**
 
 1. Expand the **Files** tab in the right pane of the UI.
 
@@ -23,17 +25,17 @@ In this lab, you will perform the following:
 
     ![Access Your VM and Lab Guide](../media/download.png)
 
-1. Minimize **Azure Portal**, from the desktop, double-click on the **Visual Studio Code**. Select **Explorer**, select **Open Folder** and select the folder that you downloaded.
+1. Minimize **Azure Portal** from the desktop. Double-click on the **Visual Studio Code**. Select **Explorer**, click on the **Open Folder** icon, and select the folder that you downloaded.
 
-    >**Note:** On the **Do you trust the authors of the files in this folder** pop-up select **Yes, I trust the authors**.
+    >**Note:** On the **Do you trust the authors of the files in this folder** pop-up, select **Yes, I trust the authors**.
 
-1. From the top menu bar, select **View**, and then select **Terminal**. Perfom the below commands in the terminal:
+1. From the top menu bar, select **View**, and then select **Terminal**. Perform the below commands in the terminal:
 
    ```
     conda create --name pf python=3.11.4
     ```
 
-    >**Note:** If you are facing any errors with conda commands, follow these steps, otherwise you can move on to the next steps:
+    >**Note:** If you are facing any errors with conda commands, follow these steps. Otherwise, you can move on to the next steps:
 
     - From the search bar on the desktop, search for **Environment variables** and select **Edit the system environment variables**.
 
@@ -49,7 +51,7 @@ In this lab, you will perform the following:
     
     - Click **OK** three times to close all windows.
   
-    - Re-open **Visual studio code**, and perform these commands, to active the conda.
+    - Re-open **Visual Studio Code**, and perform these commands to activate the conda.
 
     ```
     conda init
@@ -67,7 +69,7 @@ In this lab, you will perform the following:
     pip install promptflow promptflow-tools
     ```
     
-    >**Note:** You will need to install the following if you build the docker image locally
+    >**Note:** You will need to install the following if you want to build the Docker image locally.
     ```
     pip install keyrings.alt
     ```
@@ -78,18 +80,18 @@ In this lab, you will perform the following:
     pip install openai
     ```
 
-1. Create a folder called **connections**, under **chat_wiki** folder:
+1. Create a folder called **Connections** under the **chat_wiki** folder:
 
     ```
     mkdir connections
     ```
 
-1. Under the **Connections** folder create a file called **gpt35.yaml**.
+1. Under the **Connections** folder, create a file called **gpt35.yaml**.
 
 10. Enter the following values in the file:
 
-     - API Key: Paste the KEY 1 value here that you copied .
-     - API Base: Paste the Endpoint value here that you copied .
+     - **API Key:** Paste the KEY 1 value here that you copied.
+     - **API Base:** Paste the Endpoint value here that you copied.
 
     ```
     $schema: https://azuremlschemas.azureedge.net/promptflow/latest/AzureOpenAIConnection.schema.json
@@ -101,7 +103,7 @@ In this lab, you will perform the following:
     api_version: "2023-07-01-preview"
     ```
 
-    >**Note**:The App Service is configured with App Settings that surface as environment variables for OPENAICONNECTION_API_KEY and OPENAICONNECTION_API_BASE.
+    >**Note**: The App Service is configured with App Settings that surface as environment variables for OPENAICONNECTION_API_KEY and OPENAICONNECTION_API_BASE.
 
 12. Now, build the flow by running these commands:
     
@@ -113,9 +115,9 @@ In this lab, you will perform the following:
     pf flow build --source ./ --output dist --format docker
     ```
 
-    >**Note:** The following code will create a folder named 'dist' with a docker file and all the required flow files.
+    >**Note:** The following code will create a folder named 'dist' with a Docker file and all the required flow files.
 
-### Task 2: Build and push the image
+### Task 2: Build and Push the Image
 
 1. Ensure the **requirements.txt** in the **dist/flow** folder has the appropriate requirements. At the time of writing, they were as follows:
 
@@ -136,19 +138,19 @@ In this lab, you will perform the following:
     bs4
     openai
     ```
-1. Ensure the connections folder with the connection was created in the dist folder. If not, copy the connections folder, along with the connection file to the dist folder.
+1. Ensure the connections folder with the connection was created in the dist folder. If not, copy the connections folder, along with the connection file, to the dist folder.
 
 1. From the search bar on the desktop, search for **Environment variables** and select **Edit the system environment variables**.
   
     - In the **System Properties** window, select **Environment variables**.
 
-    - Under **System variables**, select **New** .
+    - Under **System variables**, select **New**.
     
-    - Set **Variable Name** as `OPENAICONNECTION_API_KEY` and **Variable Value** set its value to the OpenAI key you copied in Notepad.
+    - Set **Variable Name** as `OPENAICONNECTION_API_KEY`. For the **Variable Value** set its value to the **OpenAI key** you copied in Notepad.
     
     - Select **New**
       
-    - Set **Variable Name** as `OPENAICONNECTION_API_BASE` and **Variable Value** set its value to the OpenAI enpoint you copied Notepad.
+    - Set **Variable Name** as `OPENAICONNECTION_API_BASE`. For the **Variable Value** set its value to the OpenAI enpoint you copied in Notepad.
       
     - Select **New**
 
@@ -156,7 +158,7 @@ In this lab, you will perform the following:
   
     - Click **OK** three times to close all windows.
       
-1. In the visual studio code open the **Powershell** terminal, build and push the container image by running these following commands from the dist folder in your terminal:
+1. In **Visual Studio Code**, open the **PowerShell** terminal, build, and push the container image by running these following commands from the dist folder in your terminal:
 
     ```
     cd dist
@@ -175,13 +177,13 @@ In this lab, you will perform the following:
     ```
     
 
-    >**Note:** If the error shows that **Run Failed**, navigate to the **Azure Portal**, in the search bar search and select **cr<inject key="DeploymentID" enableCopy="false"></inject>**, from the left navigation pane, select **Networking**, select **All networks** in **Public network access**, and select **Save**. Navigate to the visual studio code, and re-run the previous command.
+    >**Note:** If the error shows that **Run Failed**, navigate to the **Azure Portal**. In the search bar, search, and select **cr<inject key="DeploymentID" enableCopy="false"></inject>**. From the left navigation pane, choose **Networking**, and select **All networks** in **Public network access**. Moving on, select **Save**. Navigate to the Visual Studio Code and re-run the previous command.
 
-### Task 3 : Host the chat flow container image in Azure App Service
+### Task 3: Host the Chat Flow Container Image in Azure App Service
 
-1. Perform the following steps to deploy the container image to Azure App Service:
+1. Perform the following steps to deploy the container image to **Azure App Service**.
 
-2. Set the container image on the pf App Service
+2. Set the container image on the pf App Service.
 
     ```
     $PF_APP_SERVICE_NAME="app-<inject key="DeploymentID" enableCopy="false"></inject>-pf"
@@ -192,7 +194,7 @@ In this lab, you will perform the following:
     az webapp deployment container config --enable-cd true --name $PF_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP
     ```
     
-3. Modify the configuration setting in the App Service that has the chat UI and point it to your deployed promptflow endpoint hosted in App Service instead of the managed online endpoint.
+3. Modify the **configuration setting** in the **App Service** that has the chat UI and point it to your deployed **prompt flow endpoint** hosted in the **App Service** instead of the **managed online endpoint**.
 
 
    ```
@@ -204,13 +206,13 @@ In this lab, you will perform the following:
     az webapp restart --name $UI_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP
     ```
 
-4. In the web **app-<inject key="DeploymentID" enableCopy="false"></inject>**, Under API  choose **CORS** , Update the link `https://portal.azure.com`
+4. In the web **app-<inject key="DeploymentID" enableCopy="false"></inject>**, under API  choose **CORS**. Update the link: `https://portal.azure.com`.
 
    ![Access Your VM and Lab Guide](../media/pic3-1.png)
 
-5. Repeat the step 4 for web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf**.
+5. Repeat step 4 for web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf**.
       
-6. Validate the web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf** , Click on **Browse**.
+6. Validate the web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf**. Click on **Browse**.
 
    ![Access Your VM and Lab Guide](../media/pic4.png)
 
@@ -218,14 +220,16 @@ In this lab, you will perform the following:
 
    ![Access Your VM and Lab Guide](../media/pic4-5.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> **Congratulations** on completing the task! Now, it is time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at **labs-support@spektrasystems.com**. We are available 24/7 to help you out.
 <validation step="98be4539-9dd7-4035-8b00-a464221c74c5" />
 
 ## Review
-In this lab you have completed the following tasks:
-- Deployed the flow to Azure App Service option
-- Builded and push the image
-- Hosted the chat flow container image in Azure App Service
+
+In this lab, you have completed the following tasks:
+
+- Deployed the flow to the Azure App Service option.
+- Built and pushed the image.
+- Hosted the chat flow container image in Azure App Service.
