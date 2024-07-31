@@ -1,11 +1,11 @@
-# OpenAI End to End Baseline
+# OpenAI End-to-End Baseline
 
 
 ### Overall Estimated Duration: 5 Hours
 
 ### Overview
 
-This hands-on lab series provides a comprehensive workflow for utilizing Azure OpenAI Service and Azure App Service. Participants will first create, test, and deploy a prompt flow, ensuring its functionality through runtime testing. The lab then guides users in cloning and enhancing the prompt flow before deploying it to an Azure Machine Learning-managed online endpoint. Following this, participants will publish a chat front-end web application and deploy the flow to Azure App Service. Finally, they will build and push a container image for the chat flow, and host it on Azure App Service to enable scalable, web-based interactions.
+This hands-on lab series provides a comprehensive workflow for utilizing Azure OpenAI Service and Azure App Service. Participants will first create, test, and deploy a prompt flow, ensuring its functionality through runtime testing. The lab then guides users in cloning and enhancing the prompt flow before deploying it to an Azure Machine Learning-managed online endpoint. Following this, participants will publish a chat front-end web application and deploy the flow to Azure App Service. Finally, they will build and push a container image for the chat flow and host it on Azure App Service to enable scalable, web-based interactions.
 
 ## Objective 
 The objective of these labs is to guide participants through creating, deploying, and managing prompt flows and chat applications using Azure OpenAI Service and Azure App Service.
@@ -51,7 +51,7 @@ The labs utilize the Azure OpenAI Service API for creating and testing prompt fl
  
 ## Managing Your Virtual Machine
  
- 1. Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. <br>
+ 1. Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. <br>
  
     ![Manage Your Virtual Machine](../media/res.png)
 
@@ -71,12 +71,12 @@ The labs utilize the Azure OpenAI Service API for creating and testing prompt fl
 
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below<br>:
+1. On your virtual machine, click on the Azure Portal icon as shown below:<br>
 
  
    ![Launch Azure Portal](../media/sc900-image(1).png)
  
-2. You will see the **Sign into Microsoft Azure** tab. Here, enter your credentials:<br>
+2. You will see the **Sign in to continue to Microsoft Azure** tab. Here, enter your credentials:<br>
 
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
@@ -89,12 +89,12 @@ The labs utilize the Azure OpenAI Service API for creating and testing prompt fl
  
       ![Enter Your Password](../media/sc900-image-2.png)
  
-4. If prompted to stay signed in, you can click "No."
+4. If prompted to stay signed in, you can click **No**.
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe Later** to skip the tour.
  
 6. Click **Next** from the bottom right corner to embark on your lab journey!<br>
  
    ![Start Your Azure Journey](../media/sc900-image(3).png)
  
-<br>Now you are all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
+<br>Now, you are all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
