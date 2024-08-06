@@ -36,11 +36,15 @@ In this lab, you will perform the following:
     >**Note:** If you are facing any errors with conda commands, follow these steps, otherwise you can move on to the next steps:
 
     - From the search bar on the desktop, search for **Environment variables** and select **Edit the system environment variables**.
+
+      ![Editing the system variables](../media/envvariable.png)
   
     - In the **System Properties** window, select **Environment variables**.
+      
+      ![Editing the system variables](../media/envvar1.png)
 
     - Under **System variables**, select **Path** and click **Edit**.
-    
+      
     - Click **New** and add this path: **C:\LabFiles\Anaconda3\Scripts**.
     
     - Click **OK** three times to close all windows.
@@ -182,7 +186,7 @@ In this lab, you will perform the following:
     ```
     $PF_APP_SERVICE_NAME="app-<inject key="DeploymentID" enableCopy="false"></inject>-pf"
     $RESOURCE_GROUP="ODL-Openai-<inject key="DeploymentID" enableCopy="false"></inject>-02"
-    $ACR_IMAGE_NAME="$NAME_OF_ACR.azurecr.io/$ACR_CONTAINER_NAME/$IMAGE_NAME:$IMAGE_TAG"
+    $ACR_IMAGE_NAME="${NAME_OF_ACR}.azurecr.io/${ACR_CONTAINER_NAME}/${IMAGE_NAME}:${IMAGE_TAG}"
     
     az webapp config container set --name $PF_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP --docker-custom-image-name $ACR_IMAGE_NAME --docker-registry-server-url https://$NAME_OF_ACR.azurecr.io
     az webapp deployment container config --enable-cd true --name $PF_APP_SERVICE_NAME --resource-group $RESOURCE_GROUP
