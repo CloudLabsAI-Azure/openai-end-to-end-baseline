@@ -43,10 +43,14 @@ In this lab, you will perform the following:
       
       ![Editing the system variables](../media/envvar1.png)
 
-    - Under **System variables**, select **Path** and click **Edit**.
+    - Under **System variables**, select **Path (1)** and click **Edit (2)**.
+
+       ![Editing the system variables](../media/edit_path.jpg)
       
-    - Click **New** and add this path: **C:\LabFiles\Anaconda3\Scripts**.
-    
+    - Click **New** and add this path: **C:\LabFiles\Anaconda3\Scripts (1)**.
+
+       ![Editing the system variables](../media/env_ana.jpg)
+      
     - Click **OK** three times to close all windows.
   
     - Re-open **Visual studio code**, and perform these commands, to active the conda.
@@ -142,17 +146,25 @@ In this lab, you will perform the following:
   
     - In the **System Properties** window, select **Environment variables**.
 
-    - Under **System variables**, select **New** .
-    
+    - Under **System variables**, select **New (1)** .
+
+      ![Editing the system variables](../media/new_env.jpg)
+      
     - Set **Variable Name** as `OPENAICONNECTION_API_KEY` and **Variable Value** set its value to the OpenAI key you copied in Notepad.
+  
+      ![Editing the system variables](../media/env_key2.jpg)
     
     - Select **New**
       
     - Set **Variable Name** as `OPENAICONNECTION_API_BASE` and **Variable Value** set its value to the OpenAI enpoint you copied Notepad.
+
+      ![Editing the system variables](../media/env_key3.jpg)
       
     - Select **New**
 
     - Set **Variable Name** as `GPT35_API_KEY` and **Variable Value** set its value to the OpenAI key you copied Notepad.
+
+      ![Editing the system variables](../media/env_key-1.jpg)
   
     - Click **OK** three times to close all windows.
       
