@@ -13,6 +13,16 @@ In this lab, you will perform the following:
 
 ### Task 1: Create, test, and deploy a Prompt flow
 
+1. In the Azure Portal, in **Search resources, services, and docs** search for and select **oai-<inject key="DeploymentID" enableCopy="false"></inject>**. 
+
+    ![Access Your VM and Lab Guide](../media/oai.jpg)
+   
+1. On the **oai-<inject key="DeploymentID" enableCopy="false"></inject>**, from the left navigation pane under **Resource Management** select **Keys and Endpoints**.
+   
+1. Copy the value of **KEY 1** and **Endpoint**, paste these values in the notepad you will use these values in the next step.
+
+     ![Access Your VM and Lab Guide](../media/keys_end-1.jpg)
+
 1.  In the **Azure portal** page, **search for and select** **mlw-<inject key="DeploymentID" enableCopy="false"></inject>** for machine learning workspace in the Search resources, services, and docs space. Continue by selecting the **Launch studio option**.
 
      ![Access Your VM and Lab Guide](../media/mlw.png)
@@ -25,11 +35,6 @@ In this lab, you will perform the following:
 
     ![Access Your VM and Lab Guide](../media/openai_6-1.png)
 
-1. Navigate back to the Azure Portal, in **Search resources, services, and docs** search for and select **oai-<inject key="DeploymentID" enableCopy="false"></inject>**. 
-
-1. On the **oai-<inject key="DeploymentID" enableCopy="false"></inject>**, from the left navigation pane under **Resource Management** select **Keys and Endpoints**.
-
-1. Copy the value of **KEY 1** and **Endpoint**, paste these values in the notepad you will use these values in the next step.
 
 1. Navigate back to the **Connections** tab, and follow these instructions to fill out the properties for creating connections:
     
@@ -43,6 +48,8 @@ In this lab, you will perform the following:
    - API version: Keep it as default
    - Select **Save**
 
+
+    ![Access Your VM and Lab Guide](../media/gpt35.jpg)
 ### Task 2: Clone an existing prompt flow
    
 1.  Now select the **Flows (1)** tab and click **+ Create (2)**.
