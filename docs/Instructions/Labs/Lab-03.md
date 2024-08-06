@@ -117,7 +117,7 @@ In this lab, you will perform the following:
 
 ### Task 2: Build and push the image
 
-1. Ensure the **requirements.txt** in the **dist/flow** folder has the appropriate requirements. At the time of writing, they were as follows:
+1. Ensure the **requirements.txt** in the **dist/flow** folder has fulfilled the appropriate requirements. At the time of writing, they were as follows:
 
     ```
     azure-ai-ml==1.15.0
@@ -209,8 +209,9 @@ In this lab, you will perform the following:
    ![Access Your VM and Lab Guide](../media/pic3-1.png)
 
 5. Repeat the step 4 for web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf**.
-      
-6. Validate the web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf** , Click on **Browse**.
+
+      In the Web app—pf select Overview (1) and then click on Browse (2). 
+6. In the Web **app-<inject key="DeploymentID" enableCopy="false"></inject>-pf** select **Overview (1)** and then click on **Browse (2)**. 
 
    ![Access Your VM and Lab Guide](../media/pic4.png)
 
