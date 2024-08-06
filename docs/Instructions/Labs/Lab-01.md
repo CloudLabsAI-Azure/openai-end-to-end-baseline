@@ -13,7 +13,7 @@ In this lab, you will perform the following:
 
 ### Task 1: Create, test, and deploy a Prompt flow
 
-1.  In the **Azure portal**, in **Search resources, services, and docs** search for and select **mlw-<inject key="DeploymentID" enableCopy="false"></inject>** for Machine learning workspace and select **Launch studio**.
+1.  In the **Azure portal** page, **search for and select** **mlw-<inject key="DeploymentID" enableCopy="false"></inject>** for machine learning workspace in the Search resources, services, and docs space. Continue by selecting the **Launch studio option**.
 
      ![Access Your VM and Lab Guide](../media/mlw.png)
 
