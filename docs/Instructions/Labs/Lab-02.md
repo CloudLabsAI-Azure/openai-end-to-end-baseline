@@ -88,7 +88,7 @@ In this lab, you will perform the following:
    ![Access Your VM and Lab Guide](../media/save4.png)
   
 1. Navigate to the overview of **app-<inject key="DeploymentID" enableCopy="false"></inject>** and browse to the site listed under **Default domain**<br>
-   (e.g., https://app-1399374.azurewebsites.net.com). The site will look similar to the image attached below.
+   (e.g., https://app-1399374.azurewebsites.net). The site will look similar to the image attached below.
 
    ![Access Your VM and Lab Guide](../media/save2.png)
 
