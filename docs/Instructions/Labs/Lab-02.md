@@ -35,10 +35,14 @@ In this lab, you will perform the following:
     
 ### Task 2: Publish the Chat front-end web app
 
-1. In the Azure Portal, go to the storage account **st <inject key="DeploymentID" enableCopy="false"></inject>**, from the left navigation menu, select **Containers** section within **data storage**, and select **deploy** container. From there, upload the file `chatui.zip` located at `C:\LabFiles\openai-end-to-end-baseline\website\chatui.zip`.
+1. In the Azure Portal, go to the storage account **st<inject key="DeploymentID" enableCopy="false"></inject>** section from the left navigation menu and select **Containers** within **data storage**. Moving on, select **Deploy** Container.   
+
+   ![Access Your VM and Lab Guide](../media/.png)
+
+1. ShapeOn the Deploy Container page, upload the file `chatui.zip` located at `C:\LabFiles\openai-end-to-end-baseline\website\chatui.zip`
 
    ![Access Your VM and Lab Guide](../media/openai-main-11.png)
-   
+
 1. Select **chatui.zip**, select **Generate SAS** tab, and click on **Generate SAS token and URL**. Copy the Blob SAS URL, and paste it in the notepad.
 
     ![Access Your VM and Lab Guide](../media/generatesastoken.png)
