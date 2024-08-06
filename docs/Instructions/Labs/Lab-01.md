@@ -49,7 +49,8 @@ In this lab, you will perform the following:
    - Select **Save**
 
 
-    ![Access Your VM and Lab Guide](../media/gpt35.jpg)
+    ![Access Your VM and Lab Guide](../media/gpt35-1.jpg)
+   
 ### Task 2: Clone an existing prompt flow
    
 1.  Now select the **Flows (1)** tab and click **+ Create (2)**.
@@ -66,9 +67,9 @@ In this lab, you will perform the following:
    - extract_query_from_question
    - augmented_chat
   
-    ![Access Your VM and Lab Guide](../media/openai_08_9.png)
+    ![Access Your VM and Lab Guide](../media/max_ext.jpg)
 
-    ![Access Your VM and Lab Guide](../media/openai_11-1.png)
+    ![Access Your VM and Lab Guide](../media/max_aug.jpg)
    
 6. Click on **Save (1)** and click on **Start compute session (2)**.
 
