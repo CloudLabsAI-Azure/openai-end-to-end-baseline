@@ -1,5 +1,4 @@
-# Openai end to end baseline
-
+# OpenAI End to End Baseline
 
 ### Overall Estimated Duration: 5 Hours
 ### Overview
