@@ -1,4 +1,4 @@
-# OpenAI End to End Baseline
+# Enterprise-Grade Chat Solutions with Azure Machine Learning and OpenAI
 
 ### Overall Estimated Duration: 5 Hours
 ### Overview
