@@ -1,4 +1,5 @@
 # OpenAI end-to-end baseline reference implementation
+**Note** : This lab have been renamed to **Enterprise-Grade Chat Solutions with Azure Machine Learning and OpenAI**
 
 This reference implementation illustrates an approach for authoring and running a chat application in a single region with Azure Machine Learning and OpenAI. It implements a secure environment for authoring a chat flow with Azure Machine Learning prompt flow and two options for deploying the flow:
 

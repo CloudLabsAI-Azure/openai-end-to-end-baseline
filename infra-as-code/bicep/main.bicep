@@ -7,7 +7,7 @@ param location string = resourceGroup().location
 param baseName string
 
 @description('Optional. When true will deploy a cost-optimised environment for development purposes. Note that when this param is true, the deployment is not suitable or recommended for Production environments. Default = false.')
-param developmentEnvironment bool = false
+param developmentEnvironment bool = true
 
 @description('Domain name to use for App Gateway')
 param customDomainName string = 'contoso.com'
@@ -24,6 +24,10 @@ param publishFileName string = 'chatui.zip'
 @minLength(8)
 @maxLength(123)
 param jumpBoxAdminPassword string
+
+@description('Specifies the password for the SSL certificate used in the App Gateway')
+
+
 
 // ---- Availability Zones ----
 var availabilityZones = [ '1', '2', '3' ]
@@ -52,6 +56,7 @@ module networkModule 'network.bicep' = {
   }
 }
 
+/*
 @description('Deploys Azure Bastion and the jump box, which is used for private access to the Azure ML and Azure OpenAI portals.')
 module jumpBoxModule 'jumpbox.bicep' = {
   name: 'jumpBoxDeploy'
@@ -64,6 +69,7 @@ module jumpBoxModule 'jumpbox.bicep' = {
     jumpBoxAdminPassword: jumpBoxAdminPassword
   }
 }
+*/
 
 // Deploy storage account with private endpoint and private DNS zone
 module storageModule 'storage.bicep' = {

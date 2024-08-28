@@ -120,7 +120,7 @@ resource azureMachineLearningOnlineEndpointManagedIdentity 'Microsoft.ManagedIde
 
 @description('User managed identity that represents the Azure Machine Learning workspace\'s compute instance.')
 resource azureMachineLearningInstanceComputeManagedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
-  name: 'id-amlinstancecompute'
+  name: 'idamlinstancecompute'
   location: location
 }
 
@@ -285,7 +285,7 @@ resource machineLearning 'Microsoft.MachineLearningServices/workspaces@2023-10-0
 
     // configuration for workspaces with private link endpoint
     imageBuildCompute: null
-    publicNetworkAccess: 'Disabled'
+    publicNetworkAccess: 'Enabled'
     v1LegacyMode: false
 
     allowPublicAccessWhenBehindVnet: false
@@ -334,7 +334,7 @@ resource machineLearning 'Microsoft.MachineLearningServices/workspaces@2023-10-0
     properties: {
       authMode: 'Key'
       description: 'Managed online endpoint for the /score API, to be used by the Chat UI app.'
-      publicNetworkAccess: 'Disabled'
+      publicNetworkAccess: 'Enabled'
     }
     dependsOn: [
       // Role requirements for the online endpoint: https://learn.microsoft.com/azure/machine-learning/how-to-access-resources-from-endpoints-managed-identities#give-access-permission-to-the-managed-identity
@@ -346,7 +346,7 @@ resource machineLearning 'Microsoft.MachineLearningServices/workspaces@2023-10-0
 
   @description('Azure Machine Learning Compute Instance - Ideal for development and testing from the Azure Machine Learning Studio.')
   resource instanceCompute 'computes' = {
-    name: 'amli-${baseName}'
+    name: 'amli${baseName}'
     location: location
     identity: {
       type: 'UserAssigned'
@@ -372,7 +372,7 @@ resource machineLearning 'Microsoft.MachineLearningServices/workspaces@2023-10-0
         sshSettings: {
           sshPublicAccess: 'Disabled'
         }
-        vmSize: 'STANDARD_DS3_V2' // Specifies the SKU of the compute instances. You'll need to have the required ML quota available. Adjust SKU choice if necessary.
+        vmSize: 'STANDARD_D4S_V3' // Specifies the SKU of the compute instances. You'll need to have the required ML quota available. Adjust SKU choice if necessary.
       }
     }
     dependsOn: [
